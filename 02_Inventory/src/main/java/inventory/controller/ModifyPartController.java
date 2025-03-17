@@ -108,18 +108,20 @@ public class ModifyPartController implements Initializable, Controller {
      * Method to add to button handler to switch to scene passed as source
      * @param event
      * @param source
-     * @throws IOException
      */
     @FXML
-    private void displayScene(ActionEvent event, String source) throws IOException {
-        stage = (Stage)((Button)event.getSource()).getScene().getWindow();
-        FXMLLoader loader= new FXMLLoader(getClass().getResource(source));
-        //scene = FXMLLoader.load(getClass().getResource(source));
-        scene = loader.load();
-        Controller ctrl=loader.getController();
-        ctrl.setService(service);
-        stage.setScene(new Scene(scene));
-        stage.show();
+    private void displayScene(ActionEvent event, String source) {
+        try {
+            stage = (Stage)((Button)event.getSource()).getScene().getWindow();
+            FXMLLoader loader= new FXMLLoader(getClass().getResource(source));
+            scene = loader.load();
+            Controller ctrl=loader.getController();
+            ctrl.setService(service);
+            stage.setScene(new Scene(scene));
+            stage.show();
+        } catch (IOException e) {
+            System.out.println("IO Exception: " + e.getMessage());
+        }
     }
     
     /**
@@ -148,10 +150,9 @@ public class ModifyPartController implements Initializable, Controller {
      * Seek user confirmation before canceling modifications and
      * switching scene to MainScreen
      * @param event
-     * @throws IOException
      */
     @FXML
-    void handleModifyPartCancel(ActionEvent event) throws IOException {
+    void handleModifyPartCancel(ActionEvent event) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.initModality(Modality.NONE);
         alert.setTitle("Confirmation Needed");
@@ -170,10 +171,9 @@ public class ModifyPartController implements Initializable, Controller {
      * Validate part attributes and save modifications to chosen
      * Part object then switch scene to MainScreen
      * @param event
-     * @throws IOException
      */
     @FXML
-    void handleModifyPartSave(ActionEvent event) throws IOException {
+    void handleModifyPartSave(ActionEvent event) {
         String partId = partIdTxt.getText();
         String name = nameTxt.getText();
         String price = priceTxt.getText();
@@ -185,14 +185,14 @@ public class ModifyPartController implements Initializable, Controller {
         
         try {
             errorMessage = Part.isValidPart(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), errorMessage);
-            if(errorMessage.length() > 0) {
+            if(!errorMessage.isEmpty()) {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Error Adding Part!");
                 alert.setHeaderText("Error!");
                 alert.setContentText(errorMessage);
                 alert.showAndWait();
             } else {
-                if(isOutsourced == true) {
+                if(isOutsourced) {
                     service.updateOutsourcedPart(partIndex, Integer.parseInt(partId), name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), partDynamicValue);
                 } else {
                     service.updateInhousePart(partIndex, Integer.parseInt(partId), name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), Integer.parseInt(partDynamicValue));
@@ -208,7 +208,5 @@ public class ModifyPartController implements Initializable, Controller {
             alert.setContentText("Form contains blank field.");
             alert.showAndWait();
         }
-
     }
-
 }

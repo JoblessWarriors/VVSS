@@ -4,6 +4,9 @@ import inventory.model.*;
 import inventory.repository.InventoryRepository;
 import javafx.collections.ObservableList;
 
+import java.security.InvalidParameterException;
+import java.util.List;
+
 public class InventoryService {
 
     private InventoryRepository repo;
@@ -57,7 +60,19 @@ public class InventoryService {
     }
 
     public void deletePart(Part part){
+        //verific daca exista obiecte care au doar partea respectiva
+        List<Product> products= getAllProducts();
+        for(Product product:products)
+        {
+            if(product.getAssociatedParts().size()==1 && product.getAssociatedParts().get(0).getPartId()==part.getPartId())
+                {
+                    throw new InvalidParameterException("You cannot delete a part if it is the only part a product is composed of!");
+                }
+
+
+        }
         repo.deletePart(part);
+
     }
 
     public void deleteProduct(Product product){

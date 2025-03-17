@@ -88,7 +88,7 @@ public class ModifyProductController implements Initializable, Controller {
 
     public ModifyProductController(){}
 
-    public void setService(InventoryService service){
+    public void setService(InventoryService service) {
         this.service=service;
         fillWithData();
     }
@@ -130,18 +130,21 @@ public class ModifyProductController implements Initializable, Controller {
      * Method to add to button handler to switch to scene passed as source
      * @param event
      * @param source
-     * @throws IOException
      */
     @FXML
-    private void displayScene(ActionEvent event, String source) throws IOException {
-        stage = (Stage)((Button)event.getSource()).getScene().getWindow();
-        FXMLLoader loader= new FXMLLoader(getClass().getResource(source));
-        //scene = FXMLLoader.load(getClass().getResource(source));
-        scene = loader.load();
-        Controller ctrl=loader.getController();
-        ctrl.setService(service);
-        stage.setScene(new Scene(scene));
-        stage.show();
+    private void displayScene(ActionEvent event, String source) {
+        try {
+            stage = (Stage)((Button)event.getSource()).getScene().getWindow();
+            FXMLLoader loader= new FXMLLoader(getClass().getResource(source));
+            scene = loader.load();
+            Controller ctrl=loader.getController();
+            ctrl.setService(service);
+            stage.setScene(new Scene(scene));
+            stage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
     }
     
     /**
@@ -149,7 +152,6 @@ public class ModifyProductController implements Initializable, Controller {
      */
     public void updateDeleteProductTableView() {
         deleteProductTableView.setItems(addParts);
-        
         deleteProductIdCol.setCellValueFactory(new PropertyValueFactory<>("partId"));
         deleteProductNameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
         deleteProductInventoryCol.setCellValueFactory(new PropertyValueFactory<>("inStock"));
@@ -163,7 +165,6 @@ public class ModifyProductController implements Initializable, Controller {
     @FXML
     void handleDeleteProduct(ActionEvent event) {
         Part part = deleteProductTableView.getSelectionModel().getSelectedItem();
-
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.initModality(Modality.NONE);
         alert.setTitle("Confirmation");
@@ -195,10 +196,9 @@ public class ModifyProductController implements Initializable, Controller {
      * Ask user for confirmation before canceling product modification
      * and switching scene to Main Screen
      * @param event
-     * @throws IOException
      */
     @FXML
-    void handleCancelProduct(ActionEvent event) throws IOException {
+    void handleCancelProduct(ActionEvent event) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.initModality(Modality.NONE);
         alert.setTitle("Confirmation Needed");
@@ -217,10 +217,9 @@ public class ModifyProductController implements Initializable, Controller {
      * Validate given product parameters.  If valid, update product in inventory,
      * else give user an error message explaining why the product is invalid.
      * @param event
-     * @throws IOException
      */
     @FXML
-    void handleSaveProduct(ActionEvent event) throws IOException {
+    void handleSaveProduct(ActionEvent event) {
         String name = nameTxt.getText();
         String price = priceTxt.getText();
         String inStock = inventoryTxt.getText();

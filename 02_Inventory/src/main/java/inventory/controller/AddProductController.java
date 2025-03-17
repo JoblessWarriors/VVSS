@@ -110,14 +110,18 @@ public class AddProductController implements Initializable, Controller {
      */
     @FXML
     private void displayScene(ActionEvent event, String source) throws IOException {
-        stage = (Stage)((Button)event.getSource()).getScene().getWindow();
-        FXMLLoader loader= new FXMLLoader(getClass().getResource(source));
-        //scene = FXMLLoader.load(getClass().getResource(source));
-        scene = loader.load();
-        Controller ctrl=loader.getController();
-        ctrl.setService(service);
-        stage.setScene(new Scene(scene));
-        stage.show();
+        try {
+            stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(source));
+            //scene = FXMLLoader.load(getClass().getResource(source));
+            scene = loader.load();
+            Controller ctrl = loader.getController();
+            ctrl.setService(service);
+            stage.setScene(new Scene(scene));
+            stage.show();
+        } catch (IOException e) {
+            System.out.println("IO Exception: " + e.getMessage());
+        }
     }
     
     /**
@@ -125,7 +129,6 @@ public class AddProductController implements Initializable, Controller {
      */
     public void updateDeleteProductTableView() {
         deleteProductTableView.setItems(addParts);
-        
         deleteProductIdCol.setCellValueFactory(new PropertyValueFactory<>("partId"));
         deleteProductNameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
         deleteProductInventoryCol.setCellValueFactory(new PropertyValueFactory<>("inStock"));
@@ -139,7 +142,6 @@ public class AddProductController implements Initializable, Controller {
     @FXML
     void handleDeleteProduct(ActionEvent event) {
         Part part = deleteProductTableView.getSelectionModel().getSelectedItem();
-
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.initModality(Modality.NONE);
         alert.setTitle("Confirmation");
@@ -159,21 +161,24 @@ public class AddProductController implements Initializable, Controller {
      * Ask user for confirmation before canceling product addition
      * and switching scene to Main Screen
      * @param event
-     * @throws IOException
      */
     @FXML
-    void handleCancelProduct(ActionEvent event) throws IOException {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.initModality(Modality.NONE);
-        alert.setTitle("Confirmation Needed");
-        alert.setHeaderText("Confirm Cancelation");
-        alert.setContentText("Are you sure you want to cancel adding product?");
-        Optional<ButtonType> result = alert.showAndWait();
-        if(result.get() == ButtonType.OK) {
-            System.out.println("Ok selected. Product addition canceled.");
-            displayScene(event, "/fxml/MainScreen.fxml");
-        } else {
-            System.out.println("Cancel clicked.");
+    void handleCancelProduct(ActionEvent event) {
+        try {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.initModality(Modality.NONE);
+            alert.setTitle("Confirmation Needed");
+            alert.setHeaderText("Confirm Cancelation");
+            alert.setContentText("Are you sure you want to cancel adding product?");
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.get() == ButtonType.OK) {
+                System.out.println("Ok selected. Product addition canceled.");
+                displayScene(event, "/fxml/MainScreen.fxml");
+            } else {
+                System.out.println("Cancel clicked.");
+            }
+        } catch (IOException e) {
+            System.out.println("IO Exception: " + e.getMessage());
         }
     }
     
@@ -193,36 +198,39 @@ public class AddProductController implements Initializable, Controller {
      * Validate given product parameters.  If valid, add product to inventory,
      * else give user an error message explaining why the product is invalid.
      * @param event
-     * @throws IOException
      */
     @FXML
-    void handleSaveProduct(ActionEvent event) throws IOException {
-        String name = nameTxt.getText();
-        String price = priceTxt.getText();
-        String inStock = inventoryTxt.getText();
-        String min = minTxt.getText();
-        String max = maxTxt.getText();
-        errorMessage = "";
-        
+    void handleSaveProduct(ActionEvent event)  {
         try {
-            errorMessage = Product.isValidProduct(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), addParts, errorMessage);
-            if(errorMessage.length() > 0) {
+            String name = nameTxt.getText();
+            String price = priceTxt.getText();
+            String inStock = inventoryTxt.getText();
+            String min = minTxt.getText();
+            String max = maxTxt.getText();
+            errorMessage = "";
+
+            try {
+                errorMessage = Product.isValidProduct(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), addParts, errorMessage);
+                if (errorMessage.length() > 0) {
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Error Adding Part!");
+                    alert.setHeaderText("Error!");
+                    alert.setContentText(errorMessage);
+                    alert.showAndWait();
+                } else {
+                    service.addProduct(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), addParts);
+                    displayScene(event, "/fxml/MainScreen.fxml");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Form contains blank field.");
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Error Adding Part!");
+                alert.setTitle("Error Adding Product!");
                 alert.setHeaderText("Error!");
-                alert.setContentText(errorMessage);
+                alert.setContentText("Form contains blank field.");
                 alert.showAndWait();
-            } else {
-                service.addProduct(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), addParts);
-                displayScene(event, "/fxml/MainScreen.fxml");
             }
-        } catch (NumberFormatException e) {
-            System.out.println("Form contains blank field.");
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Error Adding Product!");
-            alert.setHeaderText("Error!");
-            alert.setContentText("Form contains blank field.");
-            alert.showAndWait();
+        } catch (IOException e) {
+            System.out.println("IO Exception: " + e.getMessage());
         }
 
     }

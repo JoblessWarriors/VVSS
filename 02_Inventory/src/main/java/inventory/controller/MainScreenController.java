@@ -18,6 +18,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.security.InvalidParameterException;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
@@ -125,7 +126,7 @@ public class MainScreenController implements Initializable,Controller {
 
     /**
      * Ask user for confirmation before deleting selected part from list of parts.
-     * @param event 
+     * @param event
      */
     @FXML
     void handleDeletePart(ActionEvent event) {
@@ -148,7 +149,7 @@ public class MainScreenController implements Initializable,Controller {
 
     /**
      * Ask user for confirmation before deleting selected product from list of products.
-     * @param event 
+     * @param event
      */
     @FXML
     void handleDeleteProduct(ActionEvent event) {
@@ -162,7 +163,20 @@ public class MainScreenController implements Initializable,Controller {
         Optional<ButtonType> result = alert.showAndWait();
         
         if (result.get() == ButtonType.OK) {
-            service.deleteProduct(product);
+            try {
+            service.deleteProduct(product);}
+            catch (InvalidParameterException e)
+            {
+                System.out.println(e.getMessage());
+                // show alert
+                Alert alert1 = new Alert(AlertType.ERROR);
+                alert1.initModality(Modality.NONE);
+                alert1.setTitle("Error");
+                alert1.setHeaderText("Error");
+                alert1.setContentText(e.getMessage());
+                alert1.showAndWait();
+                return;
+            }
             System.out.println("Product " + product.getName() + " was removed.");
         } else {
             System.out.println("Product " + product.getName() + " was not removed.");
@@ -175,8 +189,12 @@ public class MainScreenController implements Initializable,Controller {
      * @throws IOException
      */
     @FXML
-    void handleAddPart(ActionEvent event) throws IOException {
-        displayScene(event, "/fxml/AddPart.fxml");
+    void handleAddPart(ActionEvent event) {
+        try {
+            displayScene(event, "/fxml/AddPart.fxml");
+        } catch (IOException e) {
+            System.out.println("IO Exception: " + e.getMessage());
+        }
     }
 
     /**
@@ -185,8 +203,12 @@ public class MainScreenController implements Initializable,Controller {
      * @throws IOException
      */
     @FXML
-    void handleAddProduct(ActionEvent event) throws IOException {
-        displayScene(event, "/fxml/AddProduct.fxml");
+    void handleAddProduct(ActionEvent event) {
+        try {
+            displayScene(event, "/fxml/AddProduct.fxml");
+        } catch (IOException e) {
+            System.out.println("IO Exception: " + e.getMessage());
+        }
     }
 
     /**
@@ -196,11 +218,15 @@ public class MainScreenController implements Initializable,Controller {
      * @throws IOException
      */
     @FXML
-    void handleModifyPart(ActionEvent event) throws IOException {
+    void handleModifyPart(ActionEvent event) {
         modifyPart = partsTableView.getSelectionModel().getSelectedItem();
         modifyPartIndex = service.getAllParts().indexOf(modifyPart);
-        
-        displayScene(event, "/fxml/ModifyPart.fxml");
+        try {
+            displayScene(event, "/fxml/ModifyPart.fxml");
+        } catch (IOException e) {
+            System.out.println("IO Exception: " + e.getMessage());
+        }
+
     }
 
     /**
@@ -212,8 +238,11 @@ public class MainScreenController implements Initializable,Controller {
     void handleModifyProduct(ActionEvent event) throws IOException {
         modifyProduct = productsTableView.getSelectionModel().getSelectedItem();
         modifyProductIndex = service.getAllProducts().indexOf(modifyProduct);
-        
-        displayScene(event, "/fxml/ModifyProduct.fxml");
+        try {
+            displayScene(event, "/fxml/ModifyProduct.fxml");
+        } catch (IOException e) {
+            System.out.println("IO Exception: " + e.getMessage());
+        }
     }
 
     /**
@@ -255,7 +284,6 @@ public class MainScreenController implements Initializable,Controller {
         String x = productsSearchTxt.getText();
         productsTableView.getSelectionModel().select(service.lookupProduct(x));
     }
-
 }
 
 
