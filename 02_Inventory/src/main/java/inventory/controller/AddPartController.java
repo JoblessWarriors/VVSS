@@ -62,7 +62,6 @@ public class AddPartController implements Initializable, Controller {
 
     @Override
     public void setService(InventoryService service){
-
         this.service=service;
     }
 
@@ -80,15 +79,19 @@ public class AddPartController implements Initializable, Controller {
      * @throws IOException
      */
     @FXML
-    private void displayScene(ActionEvent event, String source) throws IOException {
-        stage = (Stage)((Button)event.getSource()).getScene().getWindow();
-        FXMLLoader loader= new FXMLLoader(getClass().getResource(source));
-        //scene = FXMLLoader.load(getClass().getResource(source));
-        scene = loader.load();
-        Controller ctrl=loader.getController();
-        ctrl.setService(service);
-        stage.setScene(new Scene(scene));
-        stage.show();
+    private void displayScene(ActionEvent event, String source) {
+        try {
+            stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(source));
+            //scene = FXMLLoader.load(getClass().getResource(source));
+            scene = loader.load();
+            Controller ctrl = loader.getController();
+            ctrl.setService(service);
+            stage.setScene(new Scene(scene));
+            stage.show();
+        } catch (IOException e) {
+            System.out.println("IO Exception: " + e.getMessage());
+        }
     }
 
     /**
@@ -98,14 +101,14 @@ public class AddPartController implements Initializable, Controller {
      * @throws IOException
      */
     @FXML
-    void handleAddPartCancel(ActionEvent event) throws IOException {
+    void handleAddPartCancel(ActionEvent event) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.initModality(Modality.NONE);
         alert.setTitle("Confirmation Needed");
         alert.setHeaderText("Confirm Cancelation");
         alert.setContentText("Are you sure you want to cancel adding part?");
         Optional<ButtonType> result = alert.showAndWait();
-        if(result.get() == ButtonType.OK) {
+        if (result.get() == ButtonType.OK) {
             System.out.println("Ok selected. Part addition canceled.");
             displayScene(event, "/fxml/MainScreen.fxml");
         } else {
@@ -139,10 +142,9 @@ public class AddPartController implements Initializable, Controller {
      * Validate given part parameters.  If valid, add part to inventory,
      * else give user an error message explaining why the part is invalid.
      * @param event
-     * @throws IOException
      */
     @FXML
-    void handleAddPartSave(ActionEvent event) throws IOException {
+    void handleAddPartSave(ActionEvent event) {
         String name = nameTxt.getText();
         String price = priceTxt.getText();
         String inStock = inventoryTxt.getText();
@@ -153,14 +155,14 @@ public class AddPartController implements Initializable, Controller {
         
         try {
             errorMessage = Part.isValidPart(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), errorMessage);
-            if(errorMessage.length() > 0) {
+            if (!errorMessage.isEmpty()) {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Error Adding Part!");
                 alert.setHeaderText("Error!");
                 alert.setContentText(errorMessage);
                 alert.showAndWait();
             } else {
-               if(isOutsourced == true) {
+               if(isOutsourced) {
                     service.addOutsourcePart(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), partDynamicValue);
                 } else {
                     service.addInhousePart(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), Integer.parseInt(partDynamicValue));
@@ -177,5 +179,4 @@ public class AddPartController implements Initializable, Controller {
             alert.showAndWait();
         }
     }
-
 }
