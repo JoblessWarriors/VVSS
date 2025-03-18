@@ -2,7 +2,7 @@
 package inventory.model;
 
 
-public abstract class Part {
+public class Part {
 
     // Declare fields
     private int partId;
