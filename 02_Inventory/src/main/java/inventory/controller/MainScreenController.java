@@ -141,7 +141,20 @@ public class MainScreenController implements Initializable,Controller {
 
         if (result.get() == ButtonType.OK) {
             System.out.println("Part deleted.");
-            service.deletePart(part);
+            try {
+                service.deletePart(part);}
+            catch (InvalidParameterException e)
+            {
+                System.out.println(e.getMessage());
+                // show alert
+                Alert alert1 = new Alert(AlertType.ERROR);
+                alert1.initModality(Modality.NONE);
+                alert1.setTitle("Error");
+                alert1.setHeaderText("Error");
+                alert1.setContentText(e.getMessage());
+                alert1.showAndWait();
+                return;
+            }
         } else {
             System.out.println("Canceled part deletion.");
         }
