@@ -18,6 +18,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.security.InvalidParameterException;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
@@ -210,18 +211,17 @@ public class AddProductController implements Initializable, Controller {
             errorMessage = "";
 
             try {
-                errorMessage = Product.isValidProduct(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), addParts, errorMessage);
-                if (errorMessage.length() > 0) {
-                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setTitle("Error Adding Part!");
-                    alert.setHeaderText("Error!");
-                    alert.setContentText(errorMessage);
-                    alert.showAndWait();
-                } else {
-                    service.addProduct(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), addParts);
-                    displayScene(event, "/fxml/MainScreen.fxml");
-                }
-            } catch (NumberFormatException e) {
+                service.addProduct(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), addParts);
+                displayScene(event, "/fxml/MainScreen.fxml");
+            }catch(InvalidParameterException e)
+            {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Error Adding Part!");
+                alert.setHeaderText("Error!");
+                alert.setContentText(errorMessage);
+                alert.showAndWait();
+            }
+        catch (NumberFormatException e) {
                 System.out.println("Form contains blank field.");
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Error Adding Product!");

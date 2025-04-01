@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.security.InvalidParameterException;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
@@ -151,25 +152,16 @@ public class AddPartController implements Initializable, Controller {
         String min = minTxt.getText();
         String max = maxTxt.getText();
         String partDynamicValue = addPartDynamicTxt.getText();
+
         errorMessage = "";
         
         try {
-            errorMessage = Part.isValidPart(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), errorMessage);
-            if (!errorMessage.isEmpty()) {
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Error Adding Part!");
-                alert.setHeaderText("Error!");
-                alert.setContentText(errorMessage);
-                alert.showAndWait();
+            if(isOutsourced) {
+                service.addOutsourcePart(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), partDynamicValue);
             } else {
-               if(isOutsourced) {
-                    service.addOutsourcePart(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), partDynamicValue);
-                } else {
-                    service.addInhousePart(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), Integer.parseInt(partDynamicValue));
-                }
-                displayScene(event, "/fxml/MainScreen.fxml");
+                service.addInhousePart(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), Integer.parseInt(partDynamicValue));
             }
-            
+            displayScene(event, "/fxml/MainScreen.fxml");
         } catch (NumberFormatException e) {
             System.out.println("Form contains blank field.");
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -178,5 +170,11 @@ public class AddPartController implements Initializable, Controller {
             alert.setContentText("Form contains blank field.");
             alert.showAndWait();
         }
+        catch (InvalidParameterException e) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error Adding Part!");
+            alert.setHeaderText("Error!");
+            alert.setContentText(errorMessage);
+            alert.showAndWait(); }
     }
 }

@@ -15,15 +15,26 @@ public class InventoryService {
     }
 
     public void addInhousePart(String name, double price, int inStock, int min, int  max, int partDynamicValue){
+        String errorMessageProduct=Part.isValidPart(name, price, inStock, min, max,"");
+        if (errorMessageProduct.length()>0)
+            throw new InvalidParameterException(errorMessageProduct);
         InhousePart inhousePart = new InhousePart(repo.getAutoPartId(), name, price, inStock, min, max, partDynamicValue);
+
         repo.addPart(inhousePart);
     }
     public void addOutsourcePart(String name, double price, int inStock, int min, int  max, String partDynamicValue){
+        String errorMessageProduct=Part.isValidPart(name, price, inStock, min, max,"");
+        if (errorMessageProduct.length()>0)
+            throw new InvalidParameterException(errorMessageProduct);
+
         OutsourcedPart outsourcedPart = new OutsourcedPart(repo.getAutoPartId(), name, price, inStock, min, max, partDynamicValue);
         repo.addPart(outsourcedPart);
     }
 
     public void addProduct(String name, double price, int inStock, int min, int  max, ObservableList<Part> addParts){
+        String errorMessageProduct=Product.isValidProduct(name, price, inStock, min, max,addParts,"");
+        if (errorMessageProduct.length()>0)
+            throw new InvalidParameterException(errorMessageProduct);
         Product product = new Product(repo.getAutoProductId(), name, price, inStock, min, max, addParts);
         repo.addProduct(product);
     }
