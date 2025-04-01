@@ -1,0 +1,333 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><title>testspec Proiect233 - iair3347_BBT</title>
+<link type="text/css" rel="stylesheet" href="https://www.scs.ubbcluj.ro/testlink/gui/themes/default/css/tl_documents.css" />
+<style type="text/css" media="print">.notprintable { display:none;}</style>
+</head>
+<body>
+<div>
+<div style="float:right;">TestLink Community [configure $tlCfg-&gt;document_generator-&gt;company_name]</div>
+<div>&nbsp;</div><hr />
+<p style="text-align: center;"><img alt="TestLink logo" title="configure using $tlCfg->document_generator->company_logo"  width= height= src="https://www.scs.ubbcluj.ro/testlink/gui/themes/default/images/tl-logo-transparent-25.png" /></p></div>
+<div class="doc_title"><p>Test Specification</p></div>
+<div class="doc_title" style="text-align:left;margin: auto;"><p>Test Project: Proiect233<br/>Test Suite: Proiect233 - iair3347_BBT</p></div>
+<div class="summary"><p id="printedby">Printed by TestLink on 01/04/2025</p></div>
+<div class="pagefooter" id="copyright">2012 &copy; TestLink Community</div>
+<h1 class="general" style="page-break-before: always">Table Of Contents</h1><div class="toc"><p style="padding-left: 20px;"><b><a href="#toc_1">1.iair3347_BBT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc24606">Prj233-27: F01a-ECP-Valid-Adding a Part</a></p><p style="padding-left: 45px;"><a href="#toc_tc24613">Prj233-28: F01a-ECP-Not-Valid-Adding a Part</a></p><p style="padding-left: 45px;"><a href="#toc_tc24621">Prj233-29: F01a-BVA-Valid-Adding a Part</a></p><p style="padding-left: 45px;"><a href="#toc_tc24628">Prj233-30: F01a-BVA-Non-Valid-Adding a Part</a></p><p style="padding-left: 45px;"><a href="#toc_tc24634">Prj233-31: F01b-ECP-Valid-Adding a Product</a></p><p style="padding-left: 45px;"><a href="#toc_tc24639">Prj233-32: F01b-ECP-Not-Valid-Adding a Product</a></p><p style="padding-left: 45px;"><a href="#toc_tc24702">Prj233-40: F01b-BVA-Valid-Adding a Product</a></p><p style="padding-left: 45px;"><a href="#toc_tc24711">Prj233-42: F01b-BVA-Not-Valid-Adding a Product</a></p></div><h1 class="doclevel" >Scope</h1>
+<div class="txtlevel"><p>Proiect de testare pentru studentii din grupa 233.</p></div>
+ <br/><a name='toc_1'></a>
+<h1 class='doclevel'>1.Test Suite : iair3347_BBT</h1>
+<div><p>We test out the adding of parts/products.</p>
+</div><a name="toc_tc24606"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj233-27: F01a-ECP-Valid-Adding a Part&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">iair3347</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>TC for Adding a Part when every field is properly provided.<br />
+&nbsp;</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>The User has opened the Application and has selected to Add A part.<br />
+&nbsp;</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Select if the Part is :</p>
+
+<ul>
+	<li>in-house</li>
+	<li>outsourced.</li>
+</ul>
+
+<p>The user selects &quot;In-House&quot;.</p>
+</td><td><p>The partDynamicValue field name is changed .</p>
+
+<ul>
+	<li>Machine ID for &quot;In-House&quot;</li>
+	<li>Company Name for &quot;OutSourced&quot;</li>
+</ul>
+</td></tr><tr><td width="5">2</td><td><p>Completing the form:</p>
+
+<ul>
+	<li>Name : &quot;PartX&quot;</li>
+	<li>Inventory: 200</li>
+	<li>Price: 45</li>
+	<li>Max: 250</li>
+	<li>Min: 100</li>
+	<li>Machine ID: &quot;MCH-23&quot;</li>
+</ul>
+</td><td></td></tr><tr><td width="5">3</td><td><p>Press Save.</p>
+</td><td><p>The ID is auto generated, and the product is saved.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">iair3347_F01:  Adding a new product/part [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc24613"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj233-28: F01a-ECP-Not-Valid-Adding a Part&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">iair3347</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Invalid ECP Test Case&nbsp;for Adding a Part when every field is properly provided.<br />
+It is the opposite of TestCase &quot;F01a-ECP-Valid-Adding a Part&quot; because here the name of the part will not be inserted in the form, which will result in an Error.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>The User has opened the Application and has selected to Add A part.<br />
+The List of Parts and Products is shown with their coressponding actions (add,modify,delete and search)</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Select if the Part is :</p>
+
+<ul>
+	<li>in-house</li>
+	<li>outsourced.</li>
+</ul>
+
+<p>The user selects &quot;In-House&quot;.</p>
+</td><td><p>The partDynamicValue field name is changed .</p>
+
+<ul>
+	<li>Machine ID for &quot;In-House&quot;</li>
+	<li>Company Name for &quot;OutSourced&quot;</li>
+</ul>
+</td></tr><tr><td width="5">2</td><td><p>Completing the form:</p>
+
+<ul>
+	<li>Inventory: 200</li>
+	<li>Price: 45</li>
+	<li>Max: 250</li>
+	<li>Min: 100</li>
+	<li>Machine ID: &quot;MCH-23&quot;</li>
+</ul>
+</td><td></td></tr><tr><td width="5">3</td><td><p>Press Save.</p>
+</td><td><p>Error pop-up will be shown with the text message:<br />
+&quot;A name has not been entered&quot;</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">iair3347_F01:  Adding a new product/part [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc24621"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj233-29: F01a-BVA-Valid-Adding a Part&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">iair3347</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Test Case with BVA( Boundary Value Analysis)&nbsp;for Adding a Part when every field is properly provided.<br />
+The case will be based on the BVA of max=min+1, since for max=min the BVA is not valid.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>The User has opened the Application and has selected to Add A part.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Select if the Part is :</p>
+
+<ul>
+	<li>in-house</li>
+	<li>outsourced.</li>
+</ul>
+
+<p>The user selects &quot;In-House&quot;.</p>
+</td><td><p>The partDynamicValue field name is changed .</p>
+
+<ul>
+	<li>Machine ID for &quot;In-House&quot;</li>
+	<li>Company Name for &quot;OutSourced&quot;</li>
+</ul>
+</td></tr><tr><td width="5">2</td><td><p>Completing the form:</p>
+
+<ul>
+	<li>Name : &quot;PartX&quot;</li>
+	<li>Inventory: 45</li>
+	<li>Price: 45</li>
+	<li>Max: 45</li>
+	<li>Min: 44</li>
+	<li>Machine ID: &quot;MCH-23&quot;</li>
+</ul>
+</td><td></td></tr><tr><td width="5">3</td><td><p>Press Save.</p>
+</td><td><p>The ID is auto generated, and the product is saved.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">iair3347_F01:  Adding a new product/part [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc24628"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj233-30: F01a-BVA-Non-Valid-Adding a Part&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">iair3347</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Test Case with BVA( Boundary Value Analysis)&nbsp;for Adding a Part when every field is properly provided. For this test case , the provided values won&#39;t be valid.<br />
+The case will be based on the BVA of max=min, since max and min cannot be equal. See F01a-BVA-Valid-Adding a Part , for a valid version,&nbsp;</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>The User has opened the Application and has selected to Add A part.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Select if the Part is :</p>
+
+<ul>
+	<li>in-house</li>
+	<li>outsourced.</li>
+</ul>
+
+<p>The user selects &quot;In-House&quot;.</p>
+</td><td><p>The partDynamicValue field name is changed .</p>
+
+<ul>
+	<li>Machine ID for &quot;In-House&quot;</li>
+	<li>Company Name for &quot;OutSourced&quot;</li>
+</ul>
+</td></tr><tr><td width="5">2</td><td><p>Completing the form:</p>
+
+<ul>
+	<li>Name : &quot;PartX&quot;</li>
+	<li>Inventory: 45</li>
+	<li>Price: 45</li>
+	<li>Max: 45</li>
+	<li>Min: 46</li>
+	<li>Machine ID: &quot;MCH-23&quot;</li>
+</ul>
+</td><td></td></tr><tr><td width="5">3</td><td><p>Press Save.</p>
+</td><td><p>Error Pop-Up will be shown with the following message:<br />
+&quot;The Min Value must be less than the Max value.&quot;</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">iair3347_F01:  Adding a new product/part [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc24634"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj233-31: F01b-ECP-Valid-Adding a Product&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">iair3347</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Test Case&nbsp;for Adding a Product&nbsp;when every field is properly provided.<br />
+&nbsp;</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>The User has opened the Application.<br />
+Has selected to add Product.<br />
+Has the following parts in stock and has enough parts in stock for the given list of items, so that the min value and max value of it is taken into account.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>The User Completes with the following details:</p>
+
+<ul>
+	<li>Name: &quot;Laptop&quot;</li>
+	<li>Price: 3299.99</li>
+	<li>InStock: 15</li>
+	<li>Min:10</li>
+	<li>Max:30</li>
+</ul>
+</td><td></td></tr><tr><td width="5">2</td><td><p>The User adds one by one the parts with the following names:</p>
+
+<ul>
+	<li>Motherboard</li>
+	<li>Screen</li>
+	<li>Battery</li>
+</ul>
+</td><td><p>The items will appear in the list of parts for the current product.</p>
+</td></tr><tr><td width="5">3</td><td><p>Press Save.</p>
+</td><td><p>The id is auto-generated and saved in inventory.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">iair3347_F01:  Adding a new product/part [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc24639"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj233-32: F01b-ECP-Not-Valid-Adding a Product&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">iair3347</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Test Case&nbsp;for Adding a Product&nbsp;when every field is properly provided.<br />
+Value of price will be negative.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>The User has opened the Application.<br />
+Has selected to add Product.<br />
+Has the following parts in stock and has enough parts in stock for the given list of items, so that the min value and max value of it is taken into account.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>The User Completes with the following details:</p>
+
+<ul>
+	<li>Name: &quot;Printer&quot;</li>
+	<li>Price: -150</li>
+	<li>InStock: 10</li>
+	<li>Min:5</li>
+	<li>Max:20</li>
+</ul>
+</td><td></td></tr><tr><td width="5">2</td><td><p>The User adds one by one the parts with the following names:</p>
+
+<ul>
+	<li>Cartridge</li>
+	<li>Engine</li>
+	<li>USB cable</li>
+</ul>
+</td><td><p>The items will appear in the list of parts for the current product.</p>
+</td></tr><tr><td width="5">3</td><td><p>Press Save.</p>
+</td><td><p>Error Pop-up will be displayed with the following message:<br />
+&quot;The price must be greater than $0. Product price must be greater than cost of parts.&quot;</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">iair3347_F01:  Adding a new product/part [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc24702"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj233-40: F01b-BVA-Valid-Adding a Product&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">iair3347</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Test Case&nbsp;for Adding a Product&nbsp;when every field is properly provided.<br />
+We will use the boundary value for the price. The value of the price must be greater than 0.1 and greater than the price of the parts.<br />
+The smalles value a part can be is&nbsp;0.1000000000000001, precision being double, after that the price will be round up.<br />
+Than the border value for the part is&nbsp;0.1000000000000002.<br />
+<br />
+The part is Battery2 with the value of&nbsp;0.1000000000000001.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>The User has opened the Application.<br />
+Has selected to add Product.<br />
+Has the following parts in stock and has enough parts in stock for the given list of items, so that the min value and max value of it is taken into account.<br />
+The part is Battery2 with the value of&nbsp;0.1000000000000001.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>The User Completes with the following details:</p>
+
+<ul>
+	<li>Name: &quot;A&quot;</li>
+	<li>Price:&nbsp;0.1000000000000002.</li>
+	<li>InStock: 10</li>
+	<li>Min:5</li>
+	<li>Max:15</li>
+</ul>
+</td><td></td></tr><tr><td width="5">2</td><td><p>The User adds one by one the parts with the following names:</p>
+
+<ul>
+	<li>Battery2</li>
+</ul>
+</td><td><p>The items will appear in the list of parts for the current product.</p>
+</td></tr><tr><td width="5">3</td><td><p>Press Save.</p>
+</td><td><p>The id will be auto-generated and the product is saved correctly in the database.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">iair3347_F01:  Adding a new product/part [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc24711"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj233-42: F01b-BVA-Not-Valid-Adding a Product&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">iair3347</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Test Case&nbsp;for Adding a Product&nbsp;when the price field is not correctly provided.<br />
+We will use the boundary value for the price. The value of the price must be greater than 0.1 and greater than the price of the parts.<br />
+The value we will take will be 0.0, and then two errors should be propagated.<br />
+The Value must be greater than 0 and the value must be greater than the cost for the parts.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>The User has opened the Application.<br />
+Has selected to add Product.<br />
+Has the following parts in stock and has enough parts in stock for the given list of items, so that the min value and max value of it is taken into account.<br />
+The part is Battery and Screen.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>The User Completes with the following details:</p>
+
+<ul>
+	<li>Name: &quot;A&quot;</li>
+	<li>Price:&nbsp;0.0</li>
+	<li>InStock: 10</li>
+	<li>Min:5</li>
+	<li>Max:15</li>
+</ul>
+</td><td></td></tr><tr><td width="5">2</td><td><p>The User adds one by one the parts with the following names:</p>
+
+<ul>
+	<li>Battery2</li>
+</ul>
+</td><td><p>The items will appear in the list of parts for the current product.</p>
+</td></tr><tr><td width="5">3</td><td><p>Press Save.</p>
+</td><td><p>An error pop-up will be shown with the following message: &quot;Value must be greater than $0. Product price must be greater than cost of parts.&quot;</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">iair3347_F01:  Adding a new product/part [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+
+</body>
+</html>
