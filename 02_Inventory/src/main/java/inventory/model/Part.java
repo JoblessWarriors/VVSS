@@ -2,7 +2,7 @@
 package inventory.model;
 
 
-public  class Part {
+public class Part {
 
     // Declare fields
     private int partId;
