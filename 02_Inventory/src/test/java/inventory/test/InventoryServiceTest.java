@@ -13,6 +13,9 @@ import org.junit.jupiter.api.Nested; // ✅ correct import
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
+import java.io.File;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayName("Inventory Service Test – F01")
@@ -20,15 +23,27 @@ class InventoryServiceTest {
 
     private InventoryRepository inventoryRepo;
     private InventoryService inventoryService;
-
+    private static String fileName = "data/test_items.txt";
     @BeforeEach
     void setUp() {
-        inventoryRepo = new InventoryRepository();
+        // create file
+        File file = new File(fileName);
+        if(!file.exists()) {
+            try {
+                file.createNewFile();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        inventoryRepo = new InventoryRepository(fileName);
         inventoryService = new InventoryService(inventoryRepo);
     }
 
     @AfterEach
     void tearDown() {
+        //delete the file with data
+        new File(fileName).delete();
+
         inventoryRepo = null;
         inventoryService = null;
     }
@@ -40,7 +55,7 @@ class InventoryServiceTest {
     class ECPTests {
 
         @Test
-        @DisplayName("TC1_ECP – Valid input")
+        @DisplayName("TC1a_ECP – Valid input")
         void tc1_validAddInhousePart() {
             // Arrange
             String name = "PartX";
@@ -58,7 +73,7 @@ class InventoryServiceTest {
         }
 
         @Test
-        @DisplayName("TC2_ECP – Invalid: empty name")
+        @DisplayName("TC2a_ECP – Invalid: empty name")
         void tc2_invalidEmptyName() {
             int before = inventoryRepo.getAllParts().size();
             assertThrows(IllegalArgumentException.class, () ->
@@ -68,7 +83,7 @@ class InventoryServiceTest {
         }
 
         @Test
-        @DisplayName("TC3_ECP – Invalid: negative price")
+        @DisplayName("TC3a_ECP – Invalid: negative price")
         void tc3_invalidNegativePrice() {
             int before = inventoryRepo.getAllParts().size();
             assertThrows(Exception.class, () ->
@@ -97,7 +112,7 @@ class InventoryServiceTest {
                 "15,16", // min < max
                 "0,1"    // lower boundary
         })
-        @DisplayName("TC6_TC7_BVA – Valid min/max values")
+        @DisplayName("TC8a_TC7a_BVA – Valid min/max values")
         void testValidBVA(int min, int max) {
             int before = inventoryRepo.getAllParts().size();
             assertDoesNotThrow(() ->
@@ -111,7 +126,7 @@ class InventoryServiceTest {
                 "50,50", // min == max
                 "51,50"  // min > max
         })
-        @DisplayName("TC8_TC9_BVA – Invalid min/max values")
+        @DisplayName("TC6a_TC9a_BVA – Invalid min/max values")
         void testInvalidBVA(int min, int max) {
             int before = inventoryRepo.getAllParts().size();
             assertThrows(IllegalArgumentException.class, () ->
@@ -121,7 +136,7 @@ class InventoryServiceTest {
         }
 
         @Test
-        @DisplayName("TC10_BVA – Valid price")
+        @DisplayName("TC2b_BVA – Valid price")
         void testValidPriceProduct() {
             int before = inventoryRepo.getAllParts().size();
             double product_price=0.1000000000002;
@@ -139,7 +154,7 @@ class InventoryServiceTest {
         }
 
         @Test
-        @DisplayName("TC10_BVA – Invalid price")
+        @DisplayName("TC3b_BVA – Invalid price")
         void testInvalidValidPriceProduct() {
             int before = inventoryRepo.getAllParts().size();
             double product_price=0.0;
