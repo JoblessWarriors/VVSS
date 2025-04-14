@@ -102,11 +102,12 @@ public class Inventory {
         for(Part p:allParts) {
             if(p.getName().contains(searchItem))
                 foundPart = p;
-            if((p.getPartId()+"part").equals(searchItem))
+            if(p.getName().equals(searchItem))
                 foundPart = p;
-            if (p.getPartId() == Integer.parseInt(searchItem))
+            if ((p.getPartId() + "part").equals(searchItem))
                 foundPart = p;
         }
+
         if (foundPart == null) {
             throw new NoSuchElementException("Part not found");
         }
