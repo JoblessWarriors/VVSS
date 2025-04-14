@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><title>testspec Proiect233 - iair3347_WBT</title>
+<link type="text/css" rel="stylesheet" href="https://www.scs.ubbcluj.ro/testlink/gui/themes/default/css/tl_documents.css" />
+<style type="text/css" media="print">.notprintable { display:none;}</style>
+</head>
+<body>
+<div>
+<div style="float:right;">TestLink Community [configure $tlCfg-&gt;document_generator-&gt;company_name]</div>
+<div>&nbsp;</div><hr />
+<p style="text-align: center;"><img alt="TestLink logo" title="configure using $tlCfg->document_generator->company_logo"  width= height= src="https://www.scs.ubbcluj.ro/testlink/gui/themes/default/images/tl-logo-transparent-25.png" /></p></div>
+<div class="doc_title"><p>Test Specification</p></div>
+<div class="doc_title" style="text-align:left;margin: auto;"><p>Test Project: Proiect233<br/>Test Suite: Proiect233 - iair3347_WBT</p></div>
+<div class="summary"><p id="printedby">Printed by TestLink on 14/04/2025</p></div>
+<div class="pagefooter" id="copyright">2012 &copy; TestLink Community</div>
+<h1 class="general" style="page-break-before: always">Table Of Contents</h1><div class="toc"><p style="padding-left: 20px;"><b><a href="#toc_1">1.iair3347_WBT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc25811">Prj233-99: F02a_TC01-WBT-Valid-Lookup Part</a></p><p style="padding-left: 45px;"><a href="#toc_tc25814">Prj233-100: F02a_TC04-WBT-Not-Valid-Lookup Part</a></p></div><h1 class="doclevel" >Scope</h1>
+<div class="txtlevel"><p>Proiect de testare pentru studentii din grupa 233.</p></div>
+ <br/><a name='toc_1'></a>
+<h1 class='doclevel'>1.Test Suite : iair3347_WBT</h1>
+<div><p>Test Suite to test out searching a part by a specific name.</p>
+</div><a name="toc_tc25811"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj233-99: F02a_TC01-WBT-Valid-Lookup Part&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">iair3347</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Test Case for Looking up a Part by a string .<br />
+The said string it searched in either the product&#39;s name or if it is the product ID this being followed by the string part (eg. 1part).</p>
+
+<p>The test case will follow a valid input , the searchItem&nbsp;provided being &quot;1part&quot;.&nbsp;<br />
+It will identify the product with the id 1.<br />
+We will consider the list1, containing the following products:<br />
+list1 = [Product {id: 1, name: &quot;1part&quot;}, Product{id: 2, name: &quot;2&quot;}, Product{id: 3, name: &quot;3part&quot;}].</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p><br />
+- The searchItem is not null.<br />
+- The Inventory class has been instantiated.<br />
+- the list : list1 = [Product {id: 1, name: &quot;1part&quot;}, Product{id: 2, name: &quot;2&quot;}, Product{id: 3, name: &quot;3part&quot;}].<br />
+- the stringItem provided is &quot;1part&quot;</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>The function is called with the parameter stringItem instantiated with the string &quot;1part&quot;</p>
+</td><td><p>The part with the Id &quot;1&quot; is returned :&nbsp;<br />
+{id:1,<br />
+name:&quot;1part&quot;}</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >inventory.model.InventoryTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >inventory.model.InventoryTest.F02a_TC02-WBT-Valid-Lookup Part</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">ifir3346_F01:  Add new part/product [Version : 1]<br />ifir3346_F02:  ifir3346_F02 [Version : 1]<br />iair3347_F02a:  Searching a part by name [Version : 1]<br />iair3347_F01:  Adding a new product/part [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc25814"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj233-100: F02a_TC04-WBT-Not-Valid-Lookup Part&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">iair3347</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Test Case for Looking up a Part by a string .<br />
+The said string it searched in either the product&#39;s name or if it is the product ID this being followed by the string part (eg. 1part).</p>
+
+<p>The test case will follow a not-valid input , the searchItem&nbsp;provided being &quot;aa&quot;.&nbsp;<br />
+It will not find any items and will throw NoSuchElementException.<br />
+We will consider the list2, containing the following products:<br />
+list2&nbsp;= [].</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>- The stringItem is not null.<br />
+- The Inventory class has been instantiated.<br />
+- the list : list2&nbsp;= [].<br />
+- the searchItem provided is &quot;aa&quot;</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>The function is called with the parameter stringItem instantiated with the string &quot;aa&quot;</p>
+</td><td><p>There is an error thrown with &quot;NoSuchElementException&quot;.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >inventory.model.InventoryTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >inventory.model.InventoryTest.F02a_TC04-WBT-Not valid-Lookup Part</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">ifir3346_F01:  Add new part/product [Version : 1]<br />ifir3346_F02:  ifir3346_F02 [Version : 1]<br />iair3347_F02a:  Searching a part by name [Version : 1]<br />iair3347_F01:  Adding a new product/part [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+
+</body>
+</html>
