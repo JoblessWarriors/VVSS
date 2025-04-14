@@ -4,6 +4,8 @@ package inventory.model;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.util.NoSuchElementException;
+
 public class Inventory {
     
     // Declare fields
@@ -96,10 +98,19 @@ public class Inventory {
      * @return 
      */
     public Part lookupPart(String searchItem) {
+        Part foundPart = null;
         for(Part p:allParts) {
-            if(p.getName().contains(searchItem) || (p.getPartId()+"").equals(searchItem)) return p;
+            if(p.getName().contains(searchItem))
+                foundPart = p;
+            if((p.getPartId()+"part").equals(searchItem))
+                foundPart = p;
+            if (p.getPartId() == Integer.parseInt(searchItem))
+                foundPart = p;
         }
-        return null;
+        if (foundPart == null) {
+            throw new NoSuchElementException("Part not found");
+        }
+        return foundPart;
     }
     
     /**
