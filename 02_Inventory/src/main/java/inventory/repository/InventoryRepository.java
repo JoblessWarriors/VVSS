@@ -113,6 +113,7 @@ public class InventoryRepository {
 			ObservableList<Part> list= FXCollections.observableArrayList();
 			while (ids.hasMoreTokens()) {
 				String idP = ids.nextToken();
+				if (idP==null) idP="";
 				Part part = inventory.lookupPart(idP);
 				if (part != null)
 					list.add(part);
@@ -183,6 +184,10 @@ public class InventoryRepository {
 	}
 
 	public Part lookupPart (String search){
+		if(search==null)
+		{
+			search="";
+		}
 		return inventory.lookupPart(search);
 	}
 
