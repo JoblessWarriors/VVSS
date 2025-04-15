@@ -93,7 +93,7 @@ public class Inventory {
     }
     
     /**
-     * Accepts search parameter and if an ID or name matches input, that part is returned
+     * Accepts search parameter and if an ID followed by the keyword "part" or name matches input, that part is returned
      * @param searchItem
      * @return 
      */

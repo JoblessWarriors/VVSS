@@ -5,6 +5,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.io.*;
+import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
 public class InventoryRepository {
@@ -114,7 +115,11 @@ public class InventoryRepository {
 			while (ids.hasMoreTokens()) {
 				String idP = ids.nextToken();
 				if (idP==null) idP="";
-				Part part = inventory.lookupPart(idP);
+				Part part=null;
+				try {
+					part = inventory.lookupPart(idP);
+				} catch (NoSuchElementException ignored) {
+				}
 				if (part != null)
 					list.add(part);
 			}
@@ -188,7 +193,16 @@ public class InventoryRepository {
 		{
 			search="";
 		}
-		return inventory.lookupPart(search);
+		Part part=null;
+		try
+		{
+			part=inventory.lookupPart(search);
+		}
+		catch (NoSuchElementException ignored)
+		{
+
+		}
+		return part;
 	}
 
 	public Product lookupProduct (String search){
