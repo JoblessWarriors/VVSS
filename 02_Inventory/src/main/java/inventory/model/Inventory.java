@@ -1,12 +1,13 @@
 
 package inventory.model;
 
+import inventory.repository.IInventoryRepository;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.util.NoSuchElementException;
 
-public class Inventory {
+public class Inventory implements IInventoryRepository {
     
     // Declare fields
     private ObservableList<Product> products;
