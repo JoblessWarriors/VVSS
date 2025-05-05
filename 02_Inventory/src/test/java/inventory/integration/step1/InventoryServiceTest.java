@@ -1,7 +1,7 @@
 package inventory.integration.step1;
 
 import inventory.model.*;
-import inventory.repository.InventoryRepository;
+import inventory.repository.IInventoryRepository;
 import inventory.service.InventoryService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -19,7 +19,7 @@ import static org.mockito.Mockito.*;
 class InventoryServiceTest {
 
     @Mock
-    private InventoryRepository mockRepo;
+    private IInventoryRepository mockRepo;
 
     @InjectMocks
     private InventoryService service;
@@ -53,7 +53,7 @@ class InventoryServiceTest {
         ObservableList<Part> associatedParts = FXCollections.observableArrayList(part);
         Product product = new Product(1, "Widget", 20.0, 5, 1, 10, associatedParts);
 
-        when(mockRepo.getAllProducts()).thenReturn(FXCollections.observableArrayList(product));
+        when(mockRepo.getProducts()).thenReturn(FXCollections.observableArrayList(product));
 
         InvalidParameterException ex = assertThrows(InvalidParameterException.class, () -> service.deletePart(part));
         assertEquals("You cannot delete a part if it is the only part a product is composed of!", ex.getMessage());
@@ -68,7 +68,7 @@ class InventoryServiceTest {
         ObservableList<Part> associatedParts = FXCollections.observableArrayList(part, anotherPart);
         Product product = new Product(1, "Widget", 20.0, 5, 1, 10, associatedParts);
 
-        when(mockRepo.getAllProducts()).thenReturn(FXCollections.observableArrayList(product));
+        when(mockRepo.getProducts()).thenReturn(FXCollections.observableArrayList(product));
 
         service.deletePart(part);
 
