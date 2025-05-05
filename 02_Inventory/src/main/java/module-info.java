@@ -9,8 +9,8 @@ module inventory {
     exports inventory;
     opens inventory.controller to javafx.fxml;
     exports inventory.controller;
+    opens inventory.repository to org.junit.jupiter.engine;
     exports inventory.repository;
-    opens inventory.repository;
+    opens inventory.service to org.junit.jupiter.engine;
     exports inventory.service;
-    opens inventory.service;
 }
