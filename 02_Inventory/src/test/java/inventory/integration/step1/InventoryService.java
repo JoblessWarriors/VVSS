@@ -58,7 +58,7 @@ class InventoryServiceTest {
         InvalidParameterException ex = assertThrows(InvalidParameterException.class, () -> service.deletePart(part));
         assertEquals("You cannot delete a part if it is the only part a product is composed of!", ex.getMessage());
 
-        verify(mockRepo, never()).deletePart(any());
+        verify(mockRepo, never()).removePart(any());
     }
 
     @Test
@@ -72,7 +72,7 @@ class InventoryServiceTest {
 
         service.deletePart(part);
 
-        verify(mockRepo).deletePart(part);
+        verify(mockRepo).removePart(part);
     }
 
     @Test

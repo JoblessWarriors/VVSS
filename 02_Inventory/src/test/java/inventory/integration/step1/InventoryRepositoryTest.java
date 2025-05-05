@@ -50,13 +50,13 @@ class InventoryRepositoryTest {
         Part part = new InhousePart(2, "Bolt", 5.0, 10, 1, 15, 321);
 
         // Define mock behavior explicitly
-        doNothing().when(mockInventory).deletePart(part);
+        doNothing().when(mockInventory).removePart(part);
 
         // Exercise
-        repository.deletePart(part);
+        repository.removePart(part);
 
         // Verify interaction with mock object
-        verify(mockInventory, times(1)).deletePart(part);
+        verify(mockInventory, times(1)).removePart(part);
     }
 
     @Test

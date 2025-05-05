@@ -11,7 +11,7 @@ import java.util.List;
 public class InventoryService {
 
     private IInventoryRepository repo;
-    public InventoryService(InventoryRepository repo){
+    public InventoryService(IInventoryRepository repo){
         this.repo =repo;
     }
 
