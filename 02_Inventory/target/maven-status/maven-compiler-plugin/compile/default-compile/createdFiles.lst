@@ -1,4 +1,5 @@
 inventory\model\Part.class
+inventory\repository\IInventoryRepository.class
 inventory\model\Inventory.class
 inventory\model\OutsourcedPart.class
 inventory\controller\AddProductController.class
