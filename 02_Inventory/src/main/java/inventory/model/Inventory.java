@@ -1,12 +1,13 @@
 
 package inventory.model;
 
+import inventory.repository.IInventoryRepository;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.util.NoSuchElementException;
 
-public class Inventory {
+public class Inventory implements IInventoryRepository {
     
     // Declare fields
     private ObservableList<Product> products;
@@ -88,7 +89,7 @@ public class Inventory {
      * Removes part passed as parameter from allParts
      * @param part 
      */
-    public void deletePart(Part part) {
+    public void removePart(Part part) {
         allParts.remove(part);
     }
     

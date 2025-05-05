@@ -8,7 +8,7 @@ import java.io.*;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
-public class InventoryRepository {
+public class InventoryRepository implements IInventoryRepository{
 
 	private  String filename;
 	private Inventory inventory;
@@ -24,14 +24,8 @@ public class InventoryRepository {
 		readParts();
 		readProducts();
 	}
-	public InventoryRepository(Inventory inventory){
-		this.inventory=inventory;
-		this.filename=null;
-	}
 
 	public void readParts(){
-		if (filename == null) return;
-
 		//ClassLoader classLoader = InventoryRepository.class.getClassLoader();
 		File file = new File(filename);
 		ObservableList<Part> listP = FXCollections.observableArrayList();
@@ -82,7 +76,6 @@ public class InventoryRepository {
 
 	public void readProducts(){
 		//ClassLoader classLoader = InventoryRepository.class.getClassLoader();
-		if (filename == null) return;
 
 		File file = new File(filename);
 
@@ -138,8 +131,6 @@ public class InventoryRepository {
 	}
 
 	public void writeAll() {
-		if (filename == null) return;
-
 		//ClassLoader classLoader = InventoryRepository.class.getClassLoader();
 		File file = new File(filename);
 
@@ -181,6 +172,12 @@ public class InventoryRepository {
 		writeAll();
 	}
 
+	@Override
+	public void removeProduct(Product product) {
+		inventory.removeProduct(product);
+		writeAll();
+	}
+
 	public int getAutoPartId(){
 		return inventory.getAutoPartId();
 	}
@@ -189,8 +186,23 @@ public class InventoryRepository {
 		return inventory.getAutoProductId();
 	}
 
+	@Override
+	public void setAutoPartId(int id) {
+
+	}
+
+	@Override
+	public void setAutoProductId(int id) {
+
+	}
+
 	public ObservableList<Part> getAllParts(){
 		return inventory.getAllParts();
+	}
+
+	@Override
+	public void setAllParts(ObservableList<Part> list) {
+
 	}
 
 	public ObservableList<Product> getAllProducts(){
@@ -228,12 +240,18 @@ public class InventoryRepository {
 		writeAll();
 	}
 
-	public void deletePart(Part part){
-		inventory.deletePart(part);
-		writeAll();
+	@Override
+	public ObservableList<Product> getProducts() {
+		return null;
 	}
-	public void deleteProduct(Product product){
-		inventory.removeProduct(product);
+
+	@Override
+	public void setProducts(ObservableList<Product> list) {
+		inventory.setProducts(list);
+	}
+
+	public void removePart(Part part){
+		inventory.removePart(part);
 		writeAll();
 	}
 
