@@ -28,7 +28,7 @@ public class InventoryServiceTest {
     void setUp() {
         inventory = mock(Inventory.class);
         when(inventory.getAllParts()).thenReturn(FXCollections.observableArrayList());
-        inventoryRepository = new InventoryRepository(inventory);
+        inventoryRepository = new InventoryRepository();
         inventoryService = new InventoryService(inventoryRepository);
     }
 
