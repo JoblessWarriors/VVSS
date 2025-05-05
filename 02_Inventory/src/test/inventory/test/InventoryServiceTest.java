@@ -1,12 +1,9 @@
 package inventory.test;
 
 import inventory.model.Part;
-import inventory.model.Product;
 import inventory.repository.InventoryRepository;
 import inventory.service.InventoryService;
-import javafx.beans.Observable;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableArray;
 import javafx.collections.ObservableList;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.Nested; // ✅ correct import
@@ -14,7 +11,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import java.io.File;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
