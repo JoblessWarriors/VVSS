@@ -1,8 +1,6 @@
 package inventory.integration.step2;
 
 import inventory.model.*;
-import inventory.repository.IInventoryRepository;
-import inventory.repository.InventoryRepository;
 import inventory.service.InventoryService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -89,6 +87,28 @@ public class InventoryServiceTest {
     }
 
     @Test
+    void testLookupPart_CallsRepository() {
+        var inHousePartMock = mock(InhousePart.class);
+        when(inHousePartMock.getName()).thenReturn("PartX");
+
+        inventoryRepository.addPart(inHousePartMock);
+
+        var result = inventoryService.lookupPart("PartX");
+
+        assertEquals(inHousePartMock, result);
+    }
+
+    @Test
+    void testGetAllParts_CallsRepository() {
+        var outsourcedPartMock = mock(OutsourcedPart.class);
+
+        inventoryRepository.addPart(outsourcedPartMock);
+
+        var result = inventoryService.getAllParts();
+        assertEquals(1, result.size());
+    }
+
+    @Test
     void testDeletePart_WhenPartIsOnlyPartInProduct_ShouldThrowException() {
         var inHousePartMock = mock(InhousePart.class);
         when(inHousePartMock.getPartId()).thenReturn(1);
@@ -134,9 +154,9 @@ public class InventoryServiceTest {
         inventoryRepository.addPart(inHousePartMock);
 
         inventoryService.updateInhousePart(
-                1,
+                0,
                 inHousePartMock.getPartId(),
-                inHousePartMock.getName(),
+                inHousePartMock.getName() + "Updated",
                 inHousePartMock.getPrice(),
                 inHousePartMock.getInStock(),
                 inHousePartMock.getMin(),
@@ -144,37 +164,35 @@ public class InventoryServiceTest {
                 inHousePartMock.getMachineId()
         );
 
-        ObservableList<Part> result = inventoryService.getAllParts();
-        assertEquals(1, result.size());
+        Part updatedPart = inventoryRepository.lookupPart(inHousePartMock.getName());
+        assertEquals(inHousePartMock.getName() + "Updated", updatedPart.getName());
     }
-    /*
 
     @Test
     void testUpdateOutsourcedPart_Successful() {
-        service.updateOutsourcedPart(0, 2, "Bolt", 5.0, 10, 1, 15, "CompanyX");
+        var outsourcedPartMock = mock(OutsourcedPart.class);
 
-        verify(mockRepo).updatePart(eq(0), any(OutsourcedPart.class));
+        when(outsourcedPartMock.getName()).thenReturn("PartX");
+        when(outsourcedPartMock.getPrice()).thenReturn(45.0);
+        when(outsourcedPartMock.getInStock()).thenReturn(200);
+        when(outsourcedPartMock.getMin()).thenReturn(100);
+        when(outsourcedPartMock.getMax()).thenReturn(250);
+        when(outsourcedPartMock.getCompanyName()).thenReturn("CompanyX");
+
+        inventoryRepository.addPart(outsourcedPartMock);
+
+        inventoryService.updateOutsourcedPart(
+                0,
+                outsourcedPartMock.getPartId(),
+                outsourcedPartMock.getName() + "Updated",
+                outsourcedPartMock.getPrice(),
+                outsourcedPartMock.getInStock(),
+                outsourcedPartMock.getMin(),
+                outsourcedPartMock.getMax(),
+                outsourcedPartMock.getCompanyName()
+        );
+
+        Part updatedPart = inventoryRepository.lookupPart(outsourcedPartMock.getName());
+        assertEquals(outsourcedPartMock.getName() + "Updated", updatedPart.getName());
     }
-
-    @Test
-    void testLookupPart_CallsRepository() {
-        Part expectedPart = new InhousePart(1, "Gear", 10.0, 5, 1, 10, 123);
-        when(mockRepo.lookupPart("Gear")).thenReturn(expectedPart);
-
-        Part actualPart = service.lookupPart("Gear");
-
-        verify(mockRepo).lookupPart("Gear");
-        assertEquals(expectedPart, actualPart);
-    }
-
-    @Test
-    void testGetAllParts_CallsRepository() {
-        ObservableList<Part> expectedParts = FXCollections.observableArrayList();
-        when(mockRepo.getAllParts()).thenReturn(expectedParts);
-
-        ObservableList<Part> actualParts = service.getAllParts();
-
-        verify(mockRepo).getAllParts();
-        assertEquals(expectedParts, actualParts);
-    }*/
 }
