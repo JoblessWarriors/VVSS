@@ -24,8 +24,14 @@ public class InventoryRepository {
 		readParts();
 		readProducts();
 	}
+	public InventoryRepository(Inventory inventory){
+		this.inventory=inventory;
+		this.filename=null;
+	}
 
 	public void readParts(){
+		if (filename == null) return;
+
 		//ClassLoader classLoader = InventoryRepository.class.getClassLoader();
 		File file = new File(filename);
 		ObservableList<Part> listP = FXCollections.observableArrayList();
@@ -76,6 +82,8 @@ public class InventoryRepository {
 
 	public void readProducts(){
 		//ClassLoader classLoader = InventoryRepository.class.getClassLoader();
+		if (filename == null) return;
+
 		File file = new File(filename);
 
 		ObservableList<Product> listP = FXCollections.observableArrayList();
@@ -130,6 +138,7 @@ public class InventoryRepository {
 	}
 
 	public void writeAll() {
+		if (filename == null) return;
 
 		//ClassLoader classLoader = InventoryRepository.class.getClassLoader();
 		File file = new File(filename);
