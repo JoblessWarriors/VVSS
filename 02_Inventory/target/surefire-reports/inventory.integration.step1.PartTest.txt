@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: inventory.integration.step1.PartTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in inventory.integration.step1.PartTest

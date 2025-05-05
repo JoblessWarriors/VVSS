@@ -155,12 +155,11 @@
 <!--                    <forkCount>1C</forkCount>-->
 <!--                    <reuseForks>true</reuseForks>-->
 <!--                    <argLine>-Xmx1024m</argLine>-->
-          <argLine>--add-opens inventory/model=ALL-UNNAMED</argLine>
-          <argLine>--add-opens inventory/test=ALL-UNNAMED</argLine>
-
-          <argLine>--add-opens inventory/integration/step1=ALL-UNNAMED</argLine>
-          <argLine>--add-opens inventory/integration/step2=ALL-UNNAMED</argLine>
-          <argLine>--add-opens inventory/integration/step3=ALL-UNNAMED</argLine>
+          <argLine>--add-opens inventory/inventory.integration.step1=ALL-UNNAMED
+            --add-opens inventory/inventory.integration.step2=ALL-UNNAMED
+            --add-opens inventory/inventory.integration.step3=ALL-UNNAMED
+            --add-opens inventory/inventory.model=ALL-UNNAMED
+            --add-opens inventory/inventory.test=ALL-UNNAMED</argLine>
         </configuration>
       </plugin>
       <plugin>
