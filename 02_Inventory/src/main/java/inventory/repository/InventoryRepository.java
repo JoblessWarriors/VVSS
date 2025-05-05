@@ -172,6 +172,12 @@ public class InventoryRepository implements IInventoryRepository{
 		writeAll();
 	}
 
+	@Override
+	public void removeProduct(Product product) {
+		inventory.removeProduct(product);
+		writeAll();
+	}
+
 	public int getAutoPartId(){
 		return inventory.getAutoPartId();
 	}
@@ -180,8 +186,23 @@ public class InventoryRepository implements IInventoryRepository{
 		return inventory.getAutoProductId();
 	}
 
+	@Override
+	public void setAutoPartId(int id) {
+
+	}
+
+	@Override
+	public void setAutoProductId(int id) {
+
+	}
+
 	public ObservableList<Part> getAllParts(){
 		return inventory.getAllParts();
+	}
+
+	@Override
+	public void setAllParts(ObservableList<Part> list) {
+
 	}
 
 	public ObservableList<Product> getAllProducts(){
@@ -219,12 +240,18 @@ public class InventoryRepository implements IInventoryRepository{
 		writeAll();
 	}
 
-	public void deletePart(Part part){
-		inventory.deletePart(part);
-		writeAll();
+	@Override
+	public ObservableList<Product> getProducts() {
+		return null;
 	}
-	public void deleteProduct(Product product){
-		inventory.removeProduct(product);
+
+	@Override
+	public void setProducts(ObservableList<Product> list) {
+		inventory.setProducts(list);
+	}
+
+	public void removePart(Part part){
+		inventory.removePart(part);
 		writeAll();
 	}
 

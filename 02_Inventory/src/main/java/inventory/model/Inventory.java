@@ -89,7 +89,7 @@ public class Inventory implements IInventoryRepository {
      * Removes part passed as parameter from allParts
      * @param part 
      */
-    public void deletePart(Part part) {
+    public void removePart(Part part) {
         allParts.remove(part);
     }
     

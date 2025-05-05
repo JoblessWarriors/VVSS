@@ -4,6 +4,7 @@ import inventory.model.InhousePart;
 import inventory.model.Inventory;
 import inventory.model.OutsourcedPart;
 import inventory.model.Part;
+import inventory.repository.IInventoryRepository;
 import inventory.repository.InventoryRepository;
 import inventory.service.InventoryService;
 import javafx.collections.FXCollections;
@@ -20,8 +21,7 @@ import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 public class InventoryServiceTest {
-    private Inventory inventory;
-    InventoryRepository inventoryRepository = null;
+    IInventoryRepository inventoryRepository;
     InventoryService inventoryService = null;
 
     @BeforeEach
