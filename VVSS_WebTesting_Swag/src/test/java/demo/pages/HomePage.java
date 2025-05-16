@@ -9,7 +9,7 @@ import java.util.List;
 
 public class HomePage  extends PageObject {
     // for the elements on the page
-    @FindBy(css = "[data-test='inventory_item']") // This selector is used to find the inventory items on the page
+    @FindBy(css = "[data-test='inventory_list']") // This selector is used to find the inventory items on the page
     private List<WebElementFacade> inventoryItems;
 
     // for shopping cart
@@ -24,6 +24,11 @@ public class HomePage  extends PageObject {
     private WebElementFacade productSorter;
 
     public boolean isVisible() {
+        try {
+            Thread.sleep(2000); // Sleep for 2 seconds to allow the page to load
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         waitFor(inventoryItems.get(0)); // Wait for the first inventory item to be visible
         return inventoryItems.get(0).isCurrentlyVisible(); // Check if the first inventory item is visible
     }

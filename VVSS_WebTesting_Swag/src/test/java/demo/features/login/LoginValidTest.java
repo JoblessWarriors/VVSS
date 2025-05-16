@@ -13,7 +13,7 @@ import org.openqa.selenium.WebDriver;
 @RunWith(SerenityParameterizedRunner.class)
 @UseTestDataFrom("features/login/valid_data_for_login.csv")
 public class LoginValidTest {
-     @Managed(uniqueSession = true)
+     @Managed(uniqueSession = true, driver="firefox")
      public WebDriver webdriver;
      @Steps
      public EndUserSteps user;

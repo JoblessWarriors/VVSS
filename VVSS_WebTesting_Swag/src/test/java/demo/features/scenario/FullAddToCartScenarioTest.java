@@ -15,7 +15,7 @@ import org.openqa.selenium.WebDriver;
 @RunWith(SerenityParameterizedRunner.class)
 @UseTestDataFrom("features/scenario/full_add_to_cart_scenario.csv")
 public class FullAddToCartScenarioTest {
-    @Managed(uniqueSession = true)
+    @Managed(uniqueSession = true, driver="firefox")
     public WebDriver webdriver;
 
     @Steps
