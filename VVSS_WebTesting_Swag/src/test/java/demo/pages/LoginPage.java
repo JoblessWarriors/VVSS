@@ -1,9 +1,10 @@
 package demo.pages;
 
 import demo.utils.Configuration;
-import net.thucydides.core.annotations.DefaultUrl;
-import net.thucydides.core.pages.PageObject;
-import net.thucydides.core.pages.WebElementFacade;
+import net.serenitybdd.annotations.DefaultUrl;  // Updated import
+
+import net.serenitybdd.core.pages.PageObject;
+import net.serenitybdd.core.pages.WebElementFacade;
 import org.openqa.selenium.support.FindBy;
 
 @DefaultUrl(Configuration.BASE_URL)

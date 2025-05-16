@@ -1,31 +1,33 @@
 package demo.features.login;
 
 import demo.steps.serenity.EndUserSteps;
-import net.serenitybdd.junit.runners.SerenityParameterizedRunner;
-import net.thucydides.junit.annotations.UseTestDataFrom;
-import org.junit.runner.RunWith;
-import net.thucydides.core.annotations.Managed;
-import net.thucydides.core.annotations.Steps;
-import org.junit.Before;
-import org.junit.Test;
+import net.serenitybdd.annotations.Managed;
+import net.serenitybdd.annotations.Steps;
+import net.serenitybdd.junit5.SerenityJUnit5Extension;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.openqa.selenium.WebDriver;
 
-@RunWith(SerenityParameterizedRunner.class)
-@UseTestDataFrom("features/login/valid_data_for_login.csv")
+@ExtendWith(SerenityJUnit5Extension.class)
 public class LoginValidTest {
-     @Managed(uniqueSession = true, driver="firefox")
-     public WebDriver webdriver;
-     @Steps
-     public EndUserSteps user;
-     public String username, password;
-     @Before
-     public void maximize() {
-         webdriver.manage().window().maximize();
-     }
-     @Test
-     //@Ignore
-     public void test_login_with_valid_username_and_password() {
-         user.logsIn(username,password);
-         user.checkLoginSuccessful();
-     }
+    @Managed(options = "start-maximized; disable-infobars; disable-save-password-bubble")
+
+    public WebDriver webdriver;
+
+    @Steps
+    public EndUserSteps user;
+
+    @BeforeEach
+    public void maximize() {
+        webdriver.manage().window().maximize();
+    }
+
+    @ParameterizedTest
+    @CsvFileSource(resources = "/features/login/valid_data_for_login.csv", numLinesToSkip = 1)
+    public void test_login_with_valid_username_and_password(String username, String password) {
+        user.logsIn(username, password);
+        user.checkLoginSuccessful();
+    }
 }

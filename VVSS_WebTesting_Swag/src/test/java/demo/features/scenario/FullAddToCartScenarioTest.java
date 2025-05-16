@@ -1,46 +1,51 @@
 package demo.features.scenario;
 
-
 import demo.steps.serenity.EndUserSteps;
 import groovy.lang.Tuple;
-import net.serenitybdd.junit.runners.SerenityParameterizedRunner;
-import net.thucydides.core.annotations.Managed;
-import net.thucydides.core.annotations.Steps;
-import net.thucydides.junit.annotations.UseTestDataFrom;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import net.serenitybdd.annotations.Managed;
+import net.serenitybdd.annotations.Steps;
+import net.serenitybdd.junit5.SerenityJUnit5Extension;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.openqa.selenium.WebDriver;
 
-@RunWith(SerenityParameterizedRunner.class)
-@UseTestDataFrom("features/login/valid_data_for_login.csv")
+@ExtendWith(SerenityJUnit5Extension.class)
 public class FullAddToCartScenarioTest {
-    @Managed(uniqueSession = true, driver="firefox")
+    @Managed(options = "start-maximized; disable-infobars; disable-save-password-bubble")
+
     public WebDriver webdriver;
 
     @Steps
     public EndUserSteps user;
 
-    public String username, password;
-
-    @Before
+    @BeforeEach
     public void maximize() {
         webdriver.manage().window().maximize();
     }
 
-    @Test
-    public void test_valid_login_sort_add_check_cart_remove_logout() {
+    @ParameterizedTest
+    @CsvFileSource(resources = "/features/login/valid_data_for_login.csv", numLinesToSkip = 1)
+    public void test_valid_login_sort_add_check_cart_remove_logout(String username, String password) {
         // login
         user.logsIn(username, password);
         user.checkLoginSuccessful();
 
-
         // sort
+
         user.sortItemsZToA();
         user.checkSortedZToA();
-
+        user.dismissAnyPopups();
         // add to cart
         user.addItemToCart(0);
+
+        user.dismissAnyPopups();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         user.checkShoppingCart(CartItem_TestAll);
 
         // check cart
@@ -50,15 +55,14 @@ public class FullAddToCartScenarioTest {
         // remove from cart
         user.removeItemFromCart(0);
         user.checkShoppingCart();
+
         // logout
         user.logsOut();
         user.checkLogoutSuccessful();
+
         // close browser
         webdriver.quit();
     }
 
-
-    private static final Tuple<String> CartItem_TestAll=new Tuple<>("Test.allTheThings() T-Shirt (Red)","$15.99");
-
-
+    private static final Tuple<String> CartItem_TestAll = new Tuple<>("Test.allTheThings() T-Shirt (Red)", "$15.99");
 }

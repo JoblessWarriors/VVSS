@@ -1,11 +1,10 @@
 package demo.pages;
 
-import net.thucydides.core.pages.PageObject;
 import groovy.lang.Tuple;
 import net.serenitybdd.core.annotations.findby.FindBy;
+import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
-import net.thucydides.core.pages.PageObject;
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 
 import java.util.ArrayList;
@@ -23,7 +22,7 @@ public class ShoppingCartPage extends PageObject {
         waitFor(shoppingCartItems.get(itemIndex));
         WebElementFacade item = shoppingCartItems.get(itemIndex);
         WebElementFacade removeButton = item.find(By.className("cart_button"));
-        Assert.assertEquals("Remove", removeButton.getText());
+        Assertions.assertEquals("Remove", removeButton.getText());
         removeButton.click();
     }
 
