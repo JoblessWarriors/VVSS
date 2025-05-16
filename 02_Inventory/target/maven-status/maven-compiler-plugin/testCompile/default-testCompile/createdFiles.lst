@@ -1,9 +1,9 @@
 inventory\integration\step1\InventoryServiceTest.class
-inventory\test\InventoryServiceTest.class
-inventory\model\InventoryTest.class
+inventory\initial_test\InventoryServiceTest.class
+inventory\initial_test\InventoryServiceTest$ECPTests.class
 inventory\integration\step2\InventoryServiceTest.class
 inventory\integration\step3\InventoryServiceTest.class
 inventory\integration\step1\InventoryRepositoryTest.class
 inventory\integration\step1\PartTest.class
-inventory\test\InventoryServiceTest$ECPTests.class
-inventory\test\InventoryServiceTest$BvaTests.class
+inventory\initial_test\InventoryServiceTest$BvaTests.class
+inventory\test_model\InventoryTest.class
