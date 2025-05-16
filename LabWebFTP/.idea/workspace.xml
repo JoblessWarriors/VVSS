@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e4866374-ccad-4cbe-abc9-17da1e2b392a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serenity.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/webFTP/features/directory/CreateValidDirectoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/webFTP/features/login/invalid/LoginEmptyPasswordTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/webFTP/features/login/invalid/LoginEmptyUsernameTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/webFTP/features/login/invalid/LoginInvalidServerParameterizedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/webFTP/features/login/invalid/LoginInvalidServerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/webFTP/features/login/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/webFTP/features/login/valid/LoginParameterizedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/webFTP/features/login/valid/LoginTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/webFTP/pages/AccountPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/webFTP/pages/DeleteDirectoryPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/webFTP/pages/LoginPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/webFTP/pages/LogoutPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/webFTP/pages/NewDirectoryPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/webFTP/steps/serenity/AccountPageSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/webFTP/steps/serenity/DeleteDirectoryPageSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/webFTP/steps/serenity/LoginPageSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/webFTP/steps/serenity/LogoutPageSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/webFTP/steps/serenity/NewDirectoryPageSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/EmptyPasswordData.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/InvalidData.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/InvalidServerData.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/search/narrative.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/validData.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/windows/chromedriver.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/windows/chromedriver_old.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/windows/geckodriver.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/windows/geckodriver_old.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/01f5288b80adbd3af52a8ed68a4a616d3164f750229f80da1ef344382d948835.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/01f5288b80adbd3af52a8ed68a4a616d3164f750229f80da1ef344382d948835.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/025f2c420d7fb5624cc25101f5e8dee0e77999cf77ba10b8fd2b09bce84923f8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/026b933e58604976fb58ee1e67137b2f0661c28cee62c9008c484b568406821e.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/026b933e58604976fb58ee1e67137b2f0661c28cee62c9008c484b568406821e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/026b933e58604976fb58ee1e67137b2f0661c28cee62c9008c484b568406821e_screenshots.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/03c15c64ec508e0c871b18bab8b642a0ac3394499b1c8d1eb7e2f4ab54e31d38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/05251c56150b44d5248d062444fdc23e8590958cf18a83355dbbe211a668dc89.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/06ecbe93ae4edac8ef6ac9aae1c41d4a0eb7b45fc931d2b70b3091378869d2a3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/09f032d7a34ad3d3245e6ea6512474c61122257d21237d639c70e66bb980536b.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/0b7a12d3028c54bc333343951fc1df318f8ac843812708c560f8b61b2e5dc7ab.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/0be948e3b1d44817e7dd7441b8d0f48b37680144288965dbf38feb3d19ff4b6f.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/0cdaabf079028d7aba02e7600424bec92487c330f5b691bf664789a89f514309.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/1c56a5faf5d241598f96102173f37f284ad29062f3e2fdf8c6bbb850ed4628b7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/1ced999a1630a34e61470d64c4fe8acdc9eec056a87945162e45781f5822f4bb.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/1d9c04390721f11f558d78e530f112e7ca64ed797546fd55a0a1ca9fe94c5eab.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/23b6ebda53fa0b3b89c41d9e978e1e71d9fb56ebb219662a6fcee43ca6d4053f.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/2c4c54f7ce0660c0629f8096f3429ba10a0779b8f12781c4e6bae005f2e86322.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/2c4c54f7ce0660c0629f8096f3429ba10a0779b8f12781c4e6bae005f2e86322.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/2c4c54f7ce0660c0629f8096f3429ba10a0779b8f12781c4e6bae005f2e86322_screenshots.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/2eed655f6b69f7c52787a0ddd18c2057a9d20d51b76bcdf951f94ac33bd389ab.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/33e52ca99440102a7d8825cea1d3fd354be9a56c436fd8170a089aae7d61e23e.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/36a2d1ddeb7934208de13da5541d34854e075958687b6eaabf64407b96dd89ee.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/3717da06a60c5b227db598315d6ff0d254f31403363678e4053bcb550b58b0cf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/3910cc8478109aaeede1f28dcc264c8a2941ab2ebb5b55175f5b06ee67e7c089.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/3b12161eb9b4016adf1bd60fc80d9e03e55e8f288b8bfc13f735ebab04b1183c.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/3d319aff449285293e9ce64c4d442e3a23c0513d0701a91ce7541fcf676cd9fe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/3ebc051097c90fb5ab055509e220d33f0f7c000bebcbb3d3ac3edcff8062cf25.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/3ebc051097c90fb5ab055509e220d33f0f7c000bebcbb3d3ac3edcff8062cf25.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/3ebc051097c90fb5ab055509e220d33f0f7c000bebcbb3d3ac3edcff8062cf25_screenshots.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/57f56b9e9aa580dc332787f1250762454aa2e5a9185d360b695fddc7ab2a69c3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/5914997258be706d3acfa297c424665f58ccc832fa100784e91f50009217cd91.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/5a20949cec57c017b89fd0a795e869ccefd83b278c5afa735c34a577f2d76f02.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/5ad03999f7f120b28f26f17155b8a38c640342d9b472bb3af783b02a6fafe974.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/5afa420e726be9fd29320a37234f9508828bc48aaa79234e860312de0ba3e236.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/5dc153bda8cb9e3870bd5e06588b2723649f562c8a51c6b84c6158c347565cd2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/6099b6c350fba8df620face2fb18876abe1dcfcaab24b9526ffa8b0e63197f76.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/669ba0871532ed2f960deef480b59ada3faea54f2edfb1d483ec83e09f0948dc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/67dad21064daef90f8fb04ca38ce90627c81afb4dbbf1cbd43e6904143a494e5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/6d458050564b1ef8cd24504d5b3f11b438afd198345cf7056565192f98ca4910.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/70da95289be302575149d4c35b18492962fcfcb8104838644a0d14fb02bc6a1f.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/72f0cbd67de34e8a4c4162de120a2087ddf9b5ebb01e0aea61490bb07f661dc4.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/777c662a13cf1851ed83fbe868f2ca253ddc9721700207e08ff1bf6dcafe8aa6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/7969759bd103be665a147e1f49961e63bcbc4b34cdb0a2dfffcf86ce244dbb35.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/7b662c9f0bb3f9592e648a79a755b2e4a6b1bf9228f0be7939e83e2b7a30a589.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/7c1c129f85642868400b035218a0f7e91360cea8a364daee536b4139c20a3cc5.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/7d33420cc713cb68fb55485b49ea9777a5b9828fa0996a5003b1643fc0cea8e9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/7e0f13f5e374a88f7a51a164ca2d474e71c726a0296e46e76974ee8ed43fdd48.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/82f8e5a4461604c62c99ee7ff418f2c29532ea1327513c37dc9b43f542878739.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/830f61eeae4310f1b763fa25eb7c04f96425b56faed3bd697e41966da0ca20e9.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/84a033d2f60879986fba4cccf79f8efa2f892d623fc57b703e3294bcff1d8760.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/8a2ac0f2281ce1707281e5736899f4a7d60a462b06406b54760531b96af60276.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/8f29c798b567f3b8b379f19f47ad7e9b43fb5afe421b0fff1bd80b62ab32c5ff.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/8f29c798b567f3b8b379f19f47ad7e9b43fb5afe421b0fff1bd80b62ab32c5ff.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/8f29c798b567f3b8b379f19f47ad7e9b43fb5afe421b0fff1bd80b62ab32c5ff_screenshots.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/8fe35f4f12cf2e92e4cd72434140d63f0ffaf2f780096ed1889bdcaeb3ac2bfc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/9252f7ebcda79a3026ee92d11b54f1a8dd064d21d6b77a6bd8bec8a431159dfb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/934cc6ce008b9e53dc66b5afbec49b19358df39e0be75c20c4d64bb14a37fe30.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/93a6d293afc41ff0d20ea14aa8ab9ac32aa2751e8283e1f0e018506b485a20e9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/99c32f493832db9842f343745a2ad5de709ce18f1f3acd2a04d4cd25ddf4a1d6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/9be584ef19b162aa0bafe1c43cc65baaa289059c075443c694d6d535286320e8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/9d7b37d292d5dd1606e204ef76e5947b983c79f19509d6b0948e86d11611c20a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-026b933e58604976fb58ee1e67137b2f0661c28cee62c9008c484b568406821e.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-2c4c54f7ce0660c0629f8096f3429ba10a0779b8f12781c4e6bae005f2e86322.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-3ebc051097c90fb5ab055509e220d33f0f7c000bebcbb3d3ac3edcff8062cf25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-8f29c798b567f3b8b379f19f47ad7e9b43fb5afe421b0fff1bd80b62ab32c5ff.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-dcec606d3f360127c1af346cabe928beaa66ee973ff4c5a5da36a57fd0b43f2e.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-f3aa1e38a8240dd5a83c3eb2ad0469a75043d3146f8999d50478a7ced5afbb98.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-fdf5ad65f32629cac9d9cb651edf36206f071103897a2cb7a327faa6ea9f5d6a.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/a29cb673e5101103e7d4719e7725c4dd34b563f5bac66c15b6edba4fde33f0c7.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/a5f729d106eff4980c6550be1cef5b58b9f1288ec124db58c90e5bd4e6be8a27.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/a664a6adf1fd183d8759989813343c8f6be917e514d4fa6bb0135099ea51d378.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/a68ddd78e480c99c429fec344cd0636e331a10ff5810f0b3f74c73b44171dfda.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/android-icon-144x144.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/android-icon-192x192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/android-icon-36x36.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/android-icon-48x48.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/android-icon-72x72.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/android-icon-96x96.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/apple-icon-114x114.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/apple-icon-120x120.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/apple-icon-144x144.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/apple-icon-152x152.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/apple-icon-180x180.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/apple-icon-57x57.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/apple-icon-60x60.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/apple-icon-72x72.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/apple-icon-76x76.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/apple-icon-precomposed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/apple-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/b6de7ee4c24f3d976b02285fd14b2e15e5423a20e7857604853b9754f3566743.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/bfd9a735c4c89ccbfdec985cabe46c9c256534af78db5460ad2ae495e227a51c.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/bootstrap-treeview/dist/bootstrap-treeview.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/bootstrap-treeview/dist/bootstrap-treeview.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/bootstrap/css/bootstrap-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/bootstrap/css/bootstrap-theme.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/bootstrap/css/bootstrap-theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/bootstrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/bootstrap/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/bootstrap/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/bootstrap/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/bootstrap/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/bootstrap/js/npm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/browser-chrome.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/browserconfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/build-info.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/c3090440ebcc0de36d8be1be51b9cdb0af84e316666d8a2cdc7ba0d020ddf16b.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/c3d0e608013380d436032c1642d5c5ca41e02bc73c7108b5920f126ddbce4804.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/c42f8af459d503fb378663d9c84915d2c578be697606a67d59c2379fd496d3af.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/c98c47414a99f025ef7ddd62cb77cde4d0c29d054af7b8acfc9fb45bc92d86a6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/ca4d9bb31fcf155d6428da2c3319a1d5773c68475733200138d1e57424b8a36e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/cac7061fdfcb7e41c46e4525de071e30809cc0ec72ee375026c1d2bae7761ce9.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/capabilities.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/cb14c905099327effa72623da3ab8e22db16a9ee93975d0ecc59e519bf4dfde5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/cd47197f424cbce6b5b2af1913edb2a3159fd22f1883322e4b6ca9093e51cfe3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/chartist/chartist-plugin-tooltip/.bower.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/chartist/chartist-plugin-tooltip/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/chartist/chartist-plugin-tooltip/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/chartist/chartist-plugin-tooltip/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/chartist/chartist-plugin-tooltip/bower.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/chartist/chartist-plugin-tooltip/dist/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/chartist/chartist-plugin-tooltip/tasks/aliases.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/chartist/chartist-plugin-tooltip/tasks/clean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/chartist/chartist-plugin-tooltip/tasks/copy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/chartist/chartist-plugin-tooltip/tasks/jasmine.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/chartist/chartist-plugin-tooltip/tasks/jshint.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/chartist/chartist-plugin-tooltip/tasks/sass.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/chartist/chartist-plugin-tooltip/tasks/uglify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/chartist/chartist-plugin-tooltip/tasks/umd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/chartist/dist/chartist.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/chartist/dist/chartist.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/chartist/dist/chartist.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/chartist/dist/chartist.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/css/core.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/css/link.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/css/screen.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/css/tables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/d4bd30284b788a52450d396d01c904458c1a99b88111dda2f3313a9f10570593.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/d6b2c053cdb6d7039491abbe417302517f0b825f62ac1e00b0a88cbfa67be225.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/d9650095ac5b09a7b7790b13f281a8277d0648bf53aae9ee6143a8bd3f872b87.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/da00cae202a36780b32529d5b6b7f8a7555264c2f569f9ef747eb88cb7311783.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.19/datatables.bootstrap4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.19/datatables.bootstrap4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.19/datatables.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.19/datatables.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.19/time-elapsed-dhms.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/DataTables-1.10.20/css/dataTables.bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/DataTables-1.10.20/css/dataTables.bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/DataTables-1.10.20/css/dataTables.bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/DataTables-1.10.20/css/dataTables.bootstrap4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/DataTables-1.10.20/css/dataTables.foundation.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/DataTables-1.10.20/css/dataTables.foundation.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/DataTables-1.10.20/css/dataTables.jqueryui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/DataTables-1.10.20/css/dataTables.jqueryui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/DataTables-1.10.20/css/dataTables.semanticui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/DataTables-1.10.20/css/dataTables.semanticui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/DataTables-1.10.20/css/jquery.dataTables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/DataTables-1.10.20/css/jquery.dataTables.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/DataTables-1.10.20/images/sort_asc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/DataTables-1.10.20/images/sort_asc_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/DataTables-1.10.20/images/sort_both.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/DataTables-1.10.20/images/sort_desc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/DataTables-1.10.20/images/sort_desc_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/DataTables-1.10.20/js/dataTables.bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/DataTables-1.10.20/js/dataTables.bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/DataTables-1.10.20/js/dataTables.bootstrap4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/DataTables-1.10.20/js/dataTables.bootstrap4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/DataTables-1.10.20/js/dataTables.foundation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/DataTables-1.10.20/js/dataTables.foundation.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/DataTables-1.10.20/js/dataTables.jqueryui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/DataTables-1.10.20/js/dataTables.jqueryui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/DataTables-1.10.20/js/dataTables.semanticui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/DataTables-1.10.20/js/dataTables.semanticui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/DataTables-1.10.20/js/jquery.dataTables.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/DataTables-1.10.20/js/jquery.dataTables.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/datatables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/datatables.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/datatables.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/datatables.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/datatables/1.10.20/time-elapsed-dhms.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/dc5ca6f06268fe806567a0537958c77263f61d926e9f01cbdab3869b6a5d7d48.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/dcec606d3f360127c1af346cabe928beaa66ee973ff4c5a5da36a57fd0b43f2e.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/dcec606d3f360127c1af346cabe928beaa66ee973ff4c5a5da36a57fd0b43f2e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/dcec606d3f360127c1af346cabe928beaa66ee973ff4c5a5da36a57fd0b43f2e_screenshots.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/dygraph/1.1.0/dygraph-combined.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/e09257abdba4a6f6a49723971385a354ad9574cd016eb0a55634c1776ffe8555.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/e347e8136601abcf58913534027938b482b7eec98b6d26167cd4fbc8e139290e.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/e6024a8fd0997828ca6158aa7525737b7eee913edc7a1e88d675b6087ea1e31f.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/e7d1ca0c64adac8b7994ef6dab759bb2b684053f1f28e79b9acb43c7a447afad.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/excanvas/3/excanvas.compiled.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/excanvas/3/excanvas.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/f2dd7a7cf39c949ec5e655e400d04564a094bd798f72a39b20e442d98b5c47d3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/f3aa1e38a8240dd5a83c3eb2ad0469a75043d3146f8999d50478a7ced5afbb98.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/f3aa1e38a8240dd5a83c3eb2ad0469a75043d3146f8999d50478a7ced5afbb98.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/f3aa1e38a8240dd5a83c3eb2ad0469a75043d3146f8999d50478a7ced5afbb98_screenshots.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/f83e6065c23805848b8edc5d4c6c96442467af5e3a16efff4d59bf2cc6fbc963.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/f8e11aa1cf59adc838a4b0edf118614f5bcfa2113b1f3e78e37bd15fe02f1ca9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/fa3e0b44df3881ba6d3a4c1aa3fbc39e6bfa20b62f603e2d5bb8542cfee12c70.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/favicon-16x16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/favicon-32x32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/favicon-96x96.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/fd795dd5d484e96867855367086e8271e70ccdf88256777f2c26303beef1670e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/fdf5ad65f32629cac9d9cb651edf36206f071103897a2cb7a327faa6ea9f5d6a.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/fdf5ad65f32629cac9d9cb651edf36206f071103897a2cb7a327faa6ea9f5d6a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/fdf5ad65f32629cac9d9cb651edf36206f071103897a2cb7a327faa6ea9f5d6a_screenshots.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/feba01ff5ef2d3cd0cc0011b0c2554af120fd05d3edae5b73b41093ad1f1ebb9.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/fedad26ad554d637023af3c3415164d2311afde311fb430f0f924bbc05e7cb4f.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/flow/serenity.configuration.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/fontawesome-free-5.7.2-web/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/fontawesome-free-5.7.2-web/css/all.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/fontawesome-free-5.7.2-web/css/v4-shims.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/fontawesome-free-5.7.2-web/webfonts/fa-brands-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/fontawesome-free-5.7.2-web/webfonts/fa-brands-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/fontawesome-free-5.7.2-web/webfonts/fa-brands-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/fontawesome-free-5.7.2-web/webfonts/fa-brands-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/fontawesome-free-5.7.2-web/webfonts/fa-brands-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/fontawesome-free-5.7.2-web/webfonts/fa-regular-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/fontawesome-free-5.7.2-web/webfonts/fa-regular-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/fontawesome-free-5.7.2-web/webfonts/fa-regular-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/fontawesome-free-5.7.2-web/webfonts/fa-regular-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/fontawesome-free-5.7.2-web/webfonts/fa-regular-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/fontawesome-free-5.7.2-web/webfonts/fa-solid-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/fontawesome-free-5.7.2-web/webfonts/fa-solid-900.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/fontawesome-free-5.7.2-web/webfonts/fa-solid-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/fontawesome-free-5.7.2-web/webfonts/fa-solid-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/fontawesome-free-5.7.2-web/webfonts/fa-solid-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/bg_01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/bg_04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/bottomm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/cross.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/driver-appium.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/driver-chrome.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/driver-firefox.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/driver-htmlunit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/driver-iexplorer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/driver-opera.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/driver-phantomjs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/driver-provided.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/driver-remote.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/driver-safari.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/fail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/greenline.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/ico-q.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/icon-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/ignor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/links_menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/logo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/menu_f.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/menu_h.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/menu_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/middle-left.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/middle-right.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/middle.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/minus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/pending.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/plus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/screen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/serenity-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/skip.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/small-middle-left.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/small-middle-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/small-middle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/success.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/tablebg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/tick.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/top-left.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/top-right.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/top.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/topm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/traffic-green.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/traffic-in-progress.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/traffic-orange.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/traffic-red.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/traffic-yellow.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/video.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/images/worker.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jit/2.0.1/jit-yc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jit/2.0.1/jit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jit/css/AreaChart.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jit/css/BarChart.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jit/css/ForceDirected.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jit/css/ForceDirected3D.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jit/css/HeatMap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jit/css/Hypertree.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jit/css/Icicle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jit/css/Other.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jit/css/PieChart.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jit/css/RGraph.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jit/css/Spacetree.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jit/css/Sunburst.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jit/css/TimeGraph.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jit/css/Treemap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jit/css/base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jit/css/col1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jit/css/col2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jit/css/gradient.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jqtree/0.22/jqtree-circle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jqtree/0.22/jqtree.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jqtree/0.22/tree.jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jqueryui/1.11.2-start/external/jquery/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jqueryui/1.11.2-start/images/ui-bg_flat_55_999999_40x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jqueryui/1.11.2-start/images/ui-bg_flat_75_aaaaaa_40x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jqueryui/1.11.2-start/images/ui-bg_glass_45_0078ae_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jqueryui/1.11.2-start/images/ui-bg_glass_55_f8da4e_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jqueryui/1.11.2-start/images/ui-bg_glass_75_79c9ec_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jqueryui/1.11.2-start/images/ui-bg_gloss-wave_45_e14f1c_500x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jqueryui/1.11.2-start/images/ui-bg_gloss-wave_50_6eac2c_500x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jqueryui/1.11.2-start/images/ui-bg_gloss-wave_75_2191c0_500x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jqueryui/1.11.2-start/images/ui-bg_inset-hard_100_fcfdfd_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jqueryui/1.11.2-start/images/ui-icons_0078ae_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jqueryui/1.11.2-start/images/ui-icons_056b93_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jqueryui/1.11.2-start/images/ui-icons_d8e7f3_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jqueryui/1.11.2-start/images/ui-icons_e0fdff_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jqueryui/1.11.2-start/images/ui-icons_f5e175_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jqueryui/1.11.2-start/images/ui-icons_f7a50d_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jqueryui/1.11.2-start/images/ui-icons_fcd113_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jqueryui/1.11.2-start/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jqueryui/1.11.2-start/jquery-ui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jqueryui/1.11.2-start/jquery-ui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jqueryui/1.11.2-start/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jqueryui/1.11.2-start/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jqueryui/1.11.2-start/jquery-ui.structure.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jqueryui/1.11.2-start/jquery-ui.structure.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jqueryui/1.11.2-start/jquery-ui.theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/jqueryui/1.11.2-start/jquery-ui.theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/ms-icon-144x144.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/ms-icon-150x150.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/ms-icon-310x310.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/ms-icon-70x70.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/nivo-slider/3.2/demo/demo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/nivo-slider/3.2/demo/images/dev7logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/nivo-slider/3.2/demo/images/nemo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/nivo-slider/3.2/demo/images/toystory.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/nivo-slider/3.2/demo/images/up.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/nivo-slider/3.2/demo/images/walle.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/nivo-slider/3.2/demo/scripts/jquery-1.9.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/nivo-slider/3.2/demo/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/nivo-slider/3.2/jquery.nivo.slider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/nivo-slider/3.2/jquery.nivo.slider.pack.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/nivo-slider/3.2/license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/nivo-slider/3.2/nivo-slider.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/nivo-slider/3.2/nivoslider.jquery.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/nivo-slider/3.2/themes/bar/arrows.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/nivo-slider/3.2/themes/bar/bar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/nivo-slider/3.2/themes/bar/bullets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/nivo-slider/3.2/themes/bar/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/nivo-slider/3.2/themes/dark/arrows.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/nivo-slider/3.2/themes/dark/bullets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/nivo-slider/3.2/themes/dark/dark.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/nivo-slider/3.2/themes/dark/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/nivo-slider/3.2/themes/default/bullets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/nivo-slider/3.2/themes/default/default.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/nivo-slider/3.2/themes/default/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/nivo-slider/3.2/themes/light/arrows.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/nivo-slider/3.2/themes/light/bullets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/nivo-slider/3.2/themes/light/light.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/nivo-slider/3.2/themes/light/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/requirements/webFTP.features-package-requirements.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/results.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/scripts/imgpreview.full.jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/scripts/jquery-1.11.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/scripts/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/serenity-resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/summary.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/EmptyPasswordData.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/InvalidData.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/InvalidServerData.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/features/search/narrative.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/validData.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/webFTP/features/directory/CreateValidDirectoryTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/webFTP/features/login/invalid/LoginEmptyPasswordTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/webFTP/features/login/invalid/LoginEmptyUsernameTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/webFTP/features/login/invalid/LoginInvalidServerParameterizedTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/webFTP/features/login/invalid/LoginInvalidServerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/webFTP/features/login/package-info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/webFTP/features/login/valid/LoginParameterizedTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/webFTP/features/login/valid/LoginTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/webFTP/pages/AccountPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/webFTP/pages/DeleteDirectoryPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/webFTP/pages/LoginPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/webFTP/pages/LogoutPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/webFTP/pages/NewDirectoryPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/webFTP/steps/serenity/AccountPageSteps.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/webFTP/steps/serenity/DeleteDirectoryPageSteps.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/webFTP/steps/serenity/LoginPageSteps.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/webFTP/steps/serenity/LogoutPageSteps.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/webFTP/steps/serenity/NewDirectoryPageSteps.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/windows/chromedriver.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/windows/chromedriver_old.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/windows/geckodriver.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/windows/geckodriver_old.exe" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="1Te4NLguKTPubfNNHqojWnOLtzC" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.CreateValidDirectoryTest.executor": "Run",
+    "JUnit.LoginEmptyPasswordTest.executor": "Run",
+    "JUnit.LoginEmptyUsernameTest.executor": "Run",
+    "JUnit.LoginInvalidServerParameterizedTest.executor": "Run",
+    "JUnit.LoginInvalidServerTest.executor": "Run",
+    "JUnit.LoginParameterizedTest.executor": "Run",
+    "JUnit.LoginTest.executor": "Run",
+    "JUnit.webFTP in LabWebFTP (1).executor": "Run",
+    "JUnit.webFTP in LabWebFTP.executor": "Run",
+    "JUnit.webFTP.features in LabWebFTP.executor": "Run",
+    "Maven.LabWebFTP [clean].executor": "Run",
+    "Maven.LabWebFTP [serenity:aggregate].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Deea/Desktop/semestrul_2/testare/labs/VVSS/LabWebFTP",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.3678161",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "spring.configuration.checksum": "1900322d39befcae72610235172768d6",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\VVTA\VVTA2022-2023\Labs\Lab06\LabWebFTP\src\test\resources" />
+      <recent name="E:\VVTA\VVTA2019_2020\Labs\Lab07\LabWebFTP\src\test\resources" />
+      <recent name="E:\VVTA\VVTA2018_2019\Lab\Lab07\LabWebFTP\src\test\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="webFTP.features.login.invalid" />
+      <recent name="webFTP.features.login.valid" />
+      <recent name="webFTP.features.search" />
+      <recent name="webFTP.steps.serenity" />
+      <recent name="webFTP.pages" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn serenity:aggregate" />
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.webFTP in LabWebFTP (1)">
+    <configuration name="CreateValidDirectoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LabWebFTP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="webFTP.features.directory.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="webFTP.features.directory" />
+      <option name="MAIN_CLASS_NAME" value="webFTP.features.directory.CreateValidDirectoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LabWebFTP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="webFTP.features.login.valid.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="webFTP.features.login.valid" />
+      <option name="MAIN_CLASS_NAME" value="webFTP.features.login.valid.LoginTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="webFTP in LabWebFTP (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LabWebFTP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="webFTP.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="webFTP" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="webFTP in LabWebFTP" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LabWebFTP" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/webFTP" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="webFTP.features in LabWebFTP" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LabWebFTP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="webFTP.features.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="webFTP.features" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.webFTP in LabWebFTP (1)" />
+      <item itemvalue="JUnit.CreateValidDirectoryTest" />
+      <item itemvalue="JUnit.LoginTest" />
+      <item itemvalue="JUnit.webFTP in LabWebFTP" />
+      <item itemvalue="JUnit.webFTP.features in LabWebFTP" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.webFTP in LabWebFTP (1)" />
+        <item itemvalue="JUnit.CreateValidDirectoryTest" />
+        <item itemvalue="JUnit.LoginTest" />
+        <item itemvalue="JUnit.webFTP in LabWebFTP" />
+        <item itemvalue="JUnit.webFTP.features in LabWebFTP" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e4866374-ccad-4cbe-abc9-17da1e2b392a" name="Default Changelist" comment="" />
+      <created>1541768035349</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1541768035349</updated>
+      <workItem from="1541768039878" duration="6409000" />
+      <workItem from="1541780921856" duration="2845000" />
+      <workItem from="1542351353601" duration="18384000" />
+      <workItem from="1542405737146" duration="4536000" />
+      <workItem from="1542449124829" duration="1212000" />
+      <workItem from="1542453870226" duration="3679000" />
+      <workItem from="1573807215222" duration="1749000" />
+      <workItem from="1573850845951" duration="6947000" />
+      <workItem from="1573896169587" duration="809000" />
+      <workItem from="1573924519903" duration="1569000" />
+      <workItem from="1605314496719" duration="7095000" />
+      <workItem from="1605383346456" duration="733000" />
+      <workItem from="1605470497921" duration="133000" />
+      <workItem from="1636749138267" duration="3591000" />
+      <workItem from="1636783413064" duration="28000" />
+      <workItem from="1668248620965" duration="11913000" />
+      <workItem from="1668283454981" duration="220000" />
+      <workItem from="1698513253520" duration="2229000" />
+      <workItem from="1698519068770" duration="503000" />
+      <workItem from="1698600501581" duration="472000" />
+      <workItem from="1699018658421" duration="434000" />
+      <workItem from="1699019282855" duration="179000" />
+      <workItem from="1699025025823" duration="1465000" />
+      <workItem from="1699033492147" duration="1476000" />
+      <workItem from="1730319414357" duration="1435000" />
+      <workItem from="1730461679664" duration="1382000" />
+      <workItem from="1730473363029" duration="1835000" />
+      <workItem from="1731063508565" duration="636000" />
+      <workItem from="1731078916058" duration="504000" />
+      <workItem from="1744378134029" duration="2745000" />
+      <workItem from="1744382163227" duration="897000" />
+      <workItem from="1747406239371" duration="1038000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="mavenExecuteGoalHistory">
+    <option value="$PROJECT_DIR$" />
+    <option value="se" />
+  </component>
+</project>
