@@ -9,7 +9,7 @@ import java.util.List;
 
 public class HomePage  extends PageObject {
     // for the elements on the page
-    @FindBy(css = "[data-test='inventory_list']") // This selector is used to find the inventory items on the page
+    @FindBy(css = "[data-test='inventory-list']") // This selector is used to find the inventory items on the page
     private List<WebElementFacade> inventoryItems;
 
     // for shopping cart

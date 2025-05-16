@@ -93,7 +93,7 @@ public class EndUserSteps {
 
     @Step
     public void logsOut() {
-        openBurgerMenu();
+//        openBurgerMenu();
         homePage.clickLogoutButton();
     }
 

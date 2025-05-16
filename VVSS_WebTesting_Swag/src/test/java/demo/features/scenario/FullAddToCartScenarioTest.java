@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
 @RunWith(SerenityParameterizedRunner.class)
-@UseTestDataFrom("features/scenario/full_add_to_cart_scenario.csv")
+@UseTestDataFrom("features/login/valid_data_for_login.csv")
 public class FullAddToCartScenarioTest {
     @Managed(uniqueSession = true, driver="firefox")
     public WebDriver webdriver;
